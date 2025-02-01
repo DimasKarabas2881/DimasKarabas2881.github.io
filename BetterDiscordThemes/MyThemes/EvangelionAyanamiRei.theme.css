@@ -1,0 +1,25 @@
+/**
+ * @name Evangelion Ayanami Rei Theme
+ * @author DimasKarabas28
+ * @description Ayanami Rei from Neon Genesis Evangelion.
+ * @version 0.0.1 alpha
+ */
+
+@import url(https://vsthemes.org/uploads/generator/client/BasicBackground.css);
+:root {
+    --transparencycolor: 0,0,0;
+    --transparencyalpha: 0.1;
+    --messagetransparency: 0.4;
+    --guildchanneltransparency: 0.2;
+    --memberlistransparency: 0;
+    --accentcolor: 71,171,238;
+    --background: url("https://i.ytimg.com/vi/Jdb3tKxj7Ok/maxresdefault.jpg");
+    --backdrop: rgba(0,0,0,0.2);
+    --backgroundblur: 0px;
+    --popoutblur: 0px;
+    --backdropblur: 0px;
+    --version1_0_5:none;
+    --backgroundsize: cover;
+    --popoutsize: cover;
+    --backdropsize: cover;
+}

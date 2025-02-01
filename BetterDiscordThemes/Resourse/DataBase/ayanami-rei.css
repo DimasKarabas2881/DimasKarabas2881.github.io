@@ -1,0 +1,113 @@
+/*                                            *\
+ \*   DataBase - Evangelion_Ayanami_Rei-Theme \*
+   *\                                           */
+
+:root {
+    --bg-rei: url("https://github.com/DimasKarabas2881/DimasKarabas2881/blob/sensei/BetterDiscordThemes/MyThemes/Evangelion-Rei-Ayanami/Resources/ayanami_rei-background.jpg?raw=true");
+    --bg-color-dark: rgba(0, 10, 40, .6);
+}
+
+.app__160d8 {
+  background-color: transparent;
+  background-image: var(--bg-rei);
+  background-size: cover;
+}
+
+.bg__960e4 {
+  background-color: transparent;
+}
+
+#app-mount .layer__960e4  {
+  background-color: transparent;
+}
+
+body,
+#app-mount,
+#app-mount .app_a3002d,
+#app-mount .app__160d8,
+#app-mount .container_a2f514.fixClipping-3GOd_d,
+#app-mount .wrapper__61a6b,
+#app-mount .bg__960e4,
+#app-mount .layer__960e4 ,
+#app-mount .container__2637a,
+#app-mount .privateChannels__35e86,
+#app-mount .panels_c48ade > *,
+#app-mount .chat_f75fb0,
+#app-mount .container__01ae2,
+#app-mount .wrapper__0d1ef,
+#app-mount .noChat_f75fb0,
+#app-mount .members_c8ffbb,
+#app-mount .members_c8ffbb > div,
+#app-mount .container__133bf,
+#app-mount .applicationStore_f07d62,
+#app-mount .pageWrapper_a3a4ce,
+#app-mount .scrollerBase-_bVAAt,
+#app-mount .standardSidebarView__23e6b,
+#app-mount .contentRegion__23e6b {
+    background-color: transparent;
+
+.footer__214dc,
+.theme-dark .scroller_ef3116 {
+    background: transparent;
+}
+
+}
+#app-mount .children__9293f:after {
+    display: none;
+}
+#app-mount .wrapper_ef3116 {
+    background-color: transparent;
+}
+#app-mount .container__9293f.themed__9293f,
+#app-mount .sidebarRegion__23e6b,
+#app-mount .sidebar_c48ade,
+#app-mount .panels_c48ade,
+#app-mount .membersWrap_c8ffbb,
+#app-mount .nowPlayingColumn__133bf {
+    background-color: transparent;
+}
+
+.chatContent_f75fb0 {
+  background-color: transparent;
+}
+
+.theme-dark .scroller__99e7c {
+  background-color: rgba(0, 10, 40, .1);
+}
+
+.customTheme__99f8c,
+.header_f37cb1,
+.subtitleContainer_f75fb0,
+.searchBar__35e86,
+.itemsContainer_ef3116,
+.container__37e49,
+.container_c8ffbb,
+.titleBar__421ed {
+    box-shadow: none;
+    background-color: var(--bg-color-dark);
+}
+
+.button_e6e74f,
+.scrollableContainer__74017 {
+    background-color: rgba(0, 10, 40, .9);
+}
+
+.channelTextArea_f75fb0 {
+    background-color: transparent;
+}
+
+.formWithLoadedChatInput_f75fb0 {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.panel__5dec7,
+.container__37e49 {
+    background-color: var(--bg-color-dark) !important;
+    box-shadow: none;
+}
+
+.content__99f8c {
+    box-shadow: none !important;
+    background-color: var(--bg-color-dark);
+}
