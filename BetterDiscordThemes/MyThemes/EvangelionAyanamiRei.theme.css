@@ -2,11 +2,7 @@
  * @name Evangelion Ayanami Rei Theme
  * @author DimasKarabas28
  * @description Ayanami Rei from Neon Genesis Evangelion.
- * @version 0.0.1 alpha
+ * @version 0.0.2 alpha
  */
 
 @import url(https://dimaskarabas2881.github.io/BetterDiscordThemes/Resourse/DataBase/ayanami-rei.css);
-:root {
-    --bg-rei: url("https://github.com/DimasKarabas2881/DimasKarabas2881.github.io/blob/main/BetterDiscordThemes/Resourse/Images/ayanami_rei-background.jpg?raw=true");
-    --bg-color-dark: rgba(0, 10, 40, .6);
-}
