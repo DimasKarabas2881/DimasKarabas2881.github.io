@@ -1,0 +1,137 @@
+:root {
+    --bg-image: var(--theme-background);
+
+    --color-transparancy: 0,0,0;
+    --color-transparancyalpha: 0.1;
+    --guichannel-transparancy: 0.15;
+    --memberlist-transparancy: 0.0;
+
+    --dswordmark-position: absolute;
+    --dswordmark-top: 0;
+    --dswordmark-left: 0;
+    --dswordmark-padding: 4px 9px 3px;
+    --dswordmark-color: 0,0,0;
+
+    --font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; /*Эта залупа Михалыча по логике должна быть типо ссылкой на другую переменную в другом*/
+}                                                                  /*файле, который будет использоваться как шаблонный, но мне пока что похуй. Это всё потом*/
+                                         /*БАЯН*/
+/*Картиночные гармошки*/
+.appMount__51fd7 {
+    background-image: var(--bg-image) !important;
+    background-size: cover !important;
+    background: center;
+}
+
+.theme-dark .children-3xh0VB:after,
+.theme-dark .form-3gdLxP:before {background: transparent !important;}
+
+.searchBar-2aylmZ,
+.searchBar-zdmu7v,
+.scrollableContainer-15eg7h,
+.itemCard-3Etziu.wrapper-2RrXDg.outer-2JOHae.padded-2NSY6O.interactive-2zD88a,
+.inner-2pOSmK,
+.tutorialContainer-1pL9QS .wrapper-28eC3z .childWrapper-1j_1ub,
+.bg-1QIAus {
+    background-color: rgba(var(--color-transparancy), var(--color-transparancyalpha));
+}
+
+#app-mount {
+    background-color: var(--color-transparancy), var(--color-transparancyalpha);
+}
+/*Ахх~... Красиви шрифте*/
+::-webkit-input-placeholder, body, button, input, select, textarea {
+    font-family: var(--font);
+}
+ /*Прозрачненька*/
+body,                                                       /* body                                             мне в падлу тут что-то писать, всё равно мне понятно чё тут*/
+#app-mount .app-1q1i1E,                                     /* app                  container                   */
+#app-mount .app-2rEoOp,                                     /* app                  inner                       */
+#app-mount .container-16j22k,                               /* app                  loadingscreen               */
+#app-mount .wrapper-1prNyd,                                 /* app                  errorscreen                 */
+#app-mount .bg-h5JY_x,                                      /* app                  background                  */
+#app-mount .layer-3QrUeG,                                   /* layer                container                   */
+#app-mount .container-3w7J-x,                               /* channels             inner                       */
+#app-mount .privateChannels-1nO12o,                         /* dmchannels                                       */
+#app-mount .panels-j1Uci_ > *,                              /* account/voice        inner                       */
+#app-mount .chat-3bRxxu,                                    /* chat                 container                   */
+#app-mount .wrapper-3vR61M,                                 /* chat                 messages loading            */
+#app-mount .noChannel-Z1DQK7,                               /* nochannel                                        */
+#app-mount .members-1998pB,                                 /* members                                          */
+#app-mount .members-1998pB > div,                           /* members              content                     */
+#app-mount .content-MLh4nU,                                 /* unavailable                                      */
+#app-mount .container-1D34oG,                               /* peoples                                          */
+#app-mount .applicationStore-1pNvnv,                        /* nitro                                            */
+#app-mount .pageWrapper-1PgVDX,                             /* guilddiscovery                                   */
+#app-mount .scrollerBase-289Jih,                            /* scroller                                         */
+#app-mount .scroller-2FKFPG,                                /* scroller old                                     */
+#app-mount .standardSidebarView-3F1I7i,                     /* settings                                         */
+#app-mount .contentRegion-3nDuYy {                          /* settings             content                     */
+    background: transparent;
+}
+
+#app-mount .sidebarRegion-VFTUkN {                          /* settings             sidebar                             */
+    background-color: rgba(var(--color-transparancy), 0.2);
+}
+#app-mount .sidebar-_0OpfR {                                /* sidebarlist          sidebar                             */
+    background-color: rgba(var(--color-transparancy), 0.2);
+}
+
+#app-mount {                                                /* app-mount                                                */
+    background-color: rgba(var(--color-transparancy), var(--color-transparancyalpha));
+}
+#app-mount .wrapper-1Rf91z {                                /* guilds               container                           */
+    background-color: rgba(var(--color-transparancy), calc(var(--guichannel-transparancy) * 2));
+}
+#app-mount .sidebar-2K8pFh {                                /* channels             container                           */
+    background-color: rgba(var(--color-transparancy), var(--guichannel-transparancy));
+}
+#app-mount .panels-j1Uci_ {                                 /* account/voice        container                           */
+    background: transparent !important;
+}
+#app-mount .container-1r6BKw.themed-ANHk51 {                /* channelheader        container                           */
+    background-color: rgba(var(--color-transparancy), var(--guichannel-transparancy));
+}
+#app-mount .membersWrap-2h-GB4 {                            /* members              container                           */
+    background-color: rgba(var(--color-transparancy), var(--vmemberlisttransparency));
+}
+#app-mount .tabBar-fg4VK9 {                                 /* members              tabbar                              */
+    background-color: rgba(var(--color-transparancy), var(--memberlist-transparancy));
+}
+#app-mount .nowPlayingColumn-2sl4cE, #app-mount .nowPlayingColumn-2sl4cE {   /* peoples              now playing        */
+    background-color: rgba(var(--color-transparancy), var(--memberlist-transparancy));
+}
+
+.container-lRFx4q {background: transparent !important;}
+
+#app-mount .image-3zK3Wt {                                  /* app                  errorscreen image                   */
+    background-image: url(https://discordapp.com/assets/e9baf4b505eb54129f832556ea16538e.svg);
+    opacity: 0.6;
+}
+
+/*Черные и белые теперь равны... кто бы мог подумать?*/
+.theme-dark,
+.theme-light {
+    --deprecated-card-bg: #00000000;
+    --input-background: #00000000;
+    --background-primary: #00000000;
+    --background-secondary: #00000000;
+    --background-secondary-alt: #00000000;
+    --background-tertiary: #00000033;
+    --background-floating: transparent;
+    --deprecated-text-input-bg: transparent;
+}
+/*Типо надпись Discord сверху... Да...*/
+.wordmarkWindows__421ed {
+    position: var(--dswordmark-position);
+    top: var(--dswordmark-top);
+    left: var(--dswordmark-left);
+    padding: var(--dswordmark-padding);
+    color: var(--dswordmark-color);
+}
+
+            /*Типо панель друзьяшек/каналов, серверов, активности, участников сервера*/
+.sidebar_c48ade,
+.subtitleContainer_f75fb0,
+.container_c8ffbb {
+    background-color: rgba(var(--color-transparancy), 0.1); /*Да, тут пока что всё намешано в кучу будет, но я со временем это буду менять*/
+}
