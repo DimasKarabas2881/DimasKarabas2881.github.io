@@ -6,16 +6,6 @@
 :root {
     --theme-background: url("https://github.com/DimasKarabas2881/DimasKarabas2881.github.io/blob/main/BetterDiscordThemes/Resourse/Images/ayanami_rei-background.jpg?raw=true");
 
-    --color-transparancy: 0,0,0;
-    --color-transparancyalpha: 0.1;
-    --guichannel-transparancy: 0.15;
-    --memberlist-transparancy: 0.0;
-
-    --dswordmark-position: absolute;
-    --dswordmark-top: 0;
-    --dswordmark-left: 0;
-    --dswordmark-padding: 4px 9px 3px;
-    --dswordmark-color: 0,0,0;
-
-    --font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    --bg-trpcolor: rgba(0, 0, 0, .7);
+    --namecolor: white;
 }
