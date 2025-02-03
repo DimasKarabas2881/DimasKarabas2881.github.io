@@ -1,137 +1,545 @@
+/*Изнасилованный обрубок, для того чтобы/делать невидимой значительную часть интерфейса*/ 
+
 :root {
     --bg-image: var(--theme-background);
-
-    --color-transparancy: 0,0,0;
-    --color-transparancyalpha: 0.1;
-    --guichannel-transparancy: 0.15;
-    --memberlist-transparancy: 0.0;
-
-    --dswordmark-position: absolute;
-    --dswordmark-top: 0;
-    --dswordmark-left: 0;
-    --dswordmark-padding: 4px 9px 3px;
-    --dswordmark-color: 0,0,0;
-
-    --font: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; /*Эта залупа Михалыча по логике должна быть типо ссылкой на другую переменную в другом*/
-}                                                                  /*файле, который будет использоваться как шаблонный, но мне пока что похуй. Это всё потом*/
-                                         /*БАЯН*/
-/*Картиночные гармошки*/
-.appMount__51fd7 {
-    background-image: var(--bg-image) !important;
-    background-size: cover !important;
-    background: center;
+    --bg-trpcolor: rgba(0, 0, 0, .7);
+    --namecolor: white;
+}
+                                         
+ #app-mount .app__160d8 {
+  background-color: transparent;
+  background-size: cover;
+  background-image: var(--bg-image);
 }
 
-.theme-dark .children-3xh0VB:after,
-.theme-dark .form-3gdLxP:before {background: transparent !important;}
-
-.searchBar-2aylmZ,
-.searchBar-zdmu7v,
-.scrollableContainer-15eg7h,
-.itemCard-3Etziu.wrapper-2RrXDg.outer-2JOHae.padded-2NSY6O.interactive-2zD88a,
-.inner-2pOSmK,
-.tutorialContainer-1pL9QS .wrapper-28eC3z .childWrapper-1j_1ub,
-.bg-1QIAus {
-    background-color: rgba(var(--color-transparancy), var(--color-transparancyalpha));
+.scroller__23746,
+.container__551b0 /* Discovery */ {
+  background: none;
 }
 
-#app-mount {
-    background-color: var(--color-transparancy), var(--color-transparancyalpha);
-}
-/*Ахх~... Красиви шрифте*/
-::-webkit-input-placeholder, body, button, input, select, textarea {
-    font-family: var(--font);
-}
- /*Прозрачненька*/
-body,                                                       /* body                                             мне в падлу тут что-то писать, всё равно мне понятно чё тут*/
-#app-mount .app-1q1i1E,                                     /* app                  container                   */
-#app-mount .app-2rEoOp,                                     /* app                  inner                       */
-#app-mount .container-16j22k,                               /* app                  loadingscreen               */
-#app-mount .wrapper-1prNyd,                                 /* app                  errorscreen                 */
-#app-mount .bg-h5JY_x,                                      /* app                  background                  */
-#app-mount .layer-3QrUeG,                                   /* layer                container                   */
-#app-mount .container-3w7J-x,                               /* channels             inner                       */
-#app-mount .privateChannels-1nO12o,                         /* dmchannels                                       */
-#app-mount .panels-j1Uci_ > *,                              /* account/voice        inner                       */
-#app-mount .chat-3bRxxu,                                    /* chat                 container                   */
-#app-mount .wrapper-3vR61M,                                 /* chat                 messages loading            */
-#app-mount .noChannel-Z1DQK7,                               /* nochannel                                        */
-#app-mount .members-1998pB,                                 /* members                                          */
-#app-mount .members-1998pB > div,                           /* members              content                     */
-#app-mount .content-MLh4nU,                                 /* unavailable                                      */
-#app-mount .container-1D34oG,                               /* peoples                                          */
-#app-mount .applicationStore-1pNvnv,                        /* nitro                                            */
-#app-mount .pageWrapper-1PgVDX,                             /* guilddiscovery                                   */
-#app-mount .scrollerBase-289Jih,                            /* scroller                                         */
-#app-mount .scroller-2FKFPG,                                /* scroller old                                     */
-#app-mount .standardSidebarView-3F1I7i,                     /* settings                                         */
-#app-mount .contentRegion-3nDuYy {                          /* settings             content                     */
-    background: transparent;
+.contentWrapper__9c62c {
+  background-color: rgba(0, 0, 0, .6);  
+  box-shadow: none;
 }
 
-#app-mount .sidebarRegion-VFTUkN {                          /* settings             sidebar                             */
-    background-color: rgba(var(--color-transparancy), 0.2);
+.footer__214dc {
+  background: none;
 }
-#app-mount .sidebar-_0OpfR {                                /* sidebarlist          sidebar                             */
-    background-color: rgba(var(--color-transparancy), 0.2);
-}
-
-#app-mount {                                                /* app-mount                                                */
-    background-color: rgba(var(--color-transparancy), var(--color-transparancyalpha));
-}
-#app-mount .wrapper-1Rf91z {                                /* guilds               container                           */
-    background-color: rgba(var(--color-transparancy), calc(var(--guichannel-transparancy) * 2));
-}
-#app-mount .sidebar-2K8pFh {                                /* channels             container                           */
-    background-color: rgba(var(--color-transparancy), var(--guichannel-transparancy));
-}
-#app-mount .panels-j1Uci_ {                                 /* account/voice        container                           */
-    background: transparent !important;
-}
-#app-mount .container-1r6BKw.themed-ANHk51 {                /* channelheader        container                           */
-    background-color: rgba(var(--color-transparancy), var(--guichannel-transparancy));
-}
-#app-mount .membersWrap-2h-GB4 {                            /* members              container                           */
-    background-color: rgba(var(--color-transparancy), var(--vmemberlisttransparency));
-}
-#app-mount .tabBar-fg4VK9 {                                 /* members              tabbar                              */
-    background-color: rgba(var(--color-transparancy), var(--memberlist-transparancy));
-}
-#app-mount .nowPlayingColumn-2sl4cE, #app-mount .nowPlayingColumn-2sl4cE {   /* peoples              now playing        */
-    background-color: rgba(var(--color-transparancy), var(--memberlist-transparancy));
+.gradient__214dc {
+  opacity: 0 !important;
 }
 
-.container-lRFx4q {background: transparent !important;}
-
-#app-mount .image-3zK3Wt {                                  /* app                  errorscreen image                   */
-    background-image: url(https://discordapp.com/assets/e9baf4b505eb54129f832556ea16538e.svg);
-    opacity: 0.6;
+.theme-dark .scrollerContainer__5d7c9, 
+.theme-dark .emptyPage__5d7c9,
+.separator__5d7c9 {
+  background-color: transparent;
 }
 
-/*Черные и белые теперь равны... кто бы мог подумать?*/
-.theme-dark,
-.theme-light {
-    --deprecated-card-bg: #00000000;
-    --input-background: #00000000;
-    --background-primary: #00000000;
-    --background-secondary: #00000000;
-    --background-secondary-alt: #00000000;
-    --background-tertiary: #00000033;
-    --background-floating: transparent;
-    --deprecated-text-input-bg: transparent;
-}
-/*Типо надпись Discord сверху... Да...*/
-.wordmarkWindows__421ed {
-    position: var(--dswordmark-position);
-    top: var(--dswordmark-top);
-    left: var(--dswordmark-left);
-    padding: var(--dswordmark-padding);
-    color: var(--dswordmark-color);
+#app-mount .container__0b563 /* Channel and Roles */,
+#app-mount .header__0b563 {
+  background-color: transparent !important;
 }
 
-            /*Типо панель друзьяшек/каналов, серверов, активности, участников сервера*/
+.pageBody__41ed7 {
+  background: none;
+}
+
+.executedCommand_ec86aa,
+.repliedMessage_ec86aa,
+.threadMessageAccessory_ec86aa {
+  margin-left: 17px;
+}
+
+.theme-dark .activityUserPopoutV2__2ef49 .headerText__2ef49, .theme-light .activityUserPopoutV2__2ef49 .headerText__2ef49, .theme-dark .activityBiteSizePopout__2ef49 .headerText__2ef49, .theme-light .activityBiteSizePopout__2ef49 .headerText__2ef49 {
+  color: white;
+}
+
+.standardSidebarView__23e6b,
+.sidebarRegionScroller__23e6b,
+.contentRegion__23e6b,
+.bg__960e4,
+.theme-dark .layer__960e4,
+.contentRegionScroller__23e6b,
+.scroller__53543 {
+  background-color: transparent; /*Settings*/
+}
+
+.container__7d20c {
+  background: none;
+}
+
+.theme-dark .container__2637a,
 .sidebar_c48ade,
-.subtitleContainer_f75fb0,
+.panels_c48ade,
+.chat_f75fb0,
+.messages-3amgkR {
+  background-color: transparent;
+}
+
+.theme-dark .container__9293f {
+  color: white;
+  background-color: transparent !important;
+}
+
+.exampleContainer_b34334,
+.exampleModal_b34334,
+.exampleContainer-3KBk_U,
+.exampleModal-3D7ypH,
+.formFieldWrapper-3IiCRS,
+.footer-1voAYT,
+.separator-RaufQu,
+.containerFooter_eaaeee {
+  background-color: transparent;
+}
+
+.layers__160d8 {
+  background-color: var(--bg-trpcolor);
+}
+
+.h5_b717a1,
+.description_ddd181,
+.labelDescriptor_ddd181,
+.colorHeaderPrimary_fbc755 {
+  color: white;
+}
+
+#app-mount .scrollableContainer__74017 {
+  background-color: transparent;
+}
+
+.privateChannels__35e86,
+.theme-dark .scroller__99e7c,
+.theme-dark .container__133bf,
+.nowPlayingColumn__133bf,
+.scroller_ad8f79,
+.scroller_c100ff,
+.applicationStore_f07d62,
+.scroller__244e5 {
+  background: none;
+}
+
+.avatar_ec3b75 {
+  border: none;
+  background-color: transparent;
+}
+
+.theme-dark .inset_bf1984,
+.section__00943,
+.header_c6bf1b,
+.titleContainer_e29cd7 {
+  background: none;
+}
+
+.theme-dark .separator__00943 {
+  background: none;
+}
+
+.guildSeparator__252b6,
+.theme-dark .scroller_ef3116,
+.wrapper_ef3116 {
+  background: none;
+}
+
+.expandedFolderBackground__48112 {
+  border-radius: 4px;
+  background-color: transparent !important;
+}
+
+.theme-dark .pageWrapper_a3a4ce {
+  background-color: transparent;
+}
+
+.theme-dark .searchBox_d727b3 {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.background-3X6N7I {
+  background-color: transparent;
+}
+
+.fieldList__1fed1,
+.connectionHeader-2rV1ze,
+.integration-1f5IUi {
+  background-color: transparent;
+}
+
+.phoneField_a0c54f {
+  background-color: transparent;
+  border: none;
+}
+
+.phoneField_a0c54f .inputField_a0c54f {
+  background-color: transparent;
+  color: white;
+}
+
+#app-mount .card__4cb8a,
+#app-mount .iconMask__4cb8a {
+  background-color: transparent;
+}
+
+.upload_aa605f {
+  background-color: transparent;
+}
+
+.wrapper_fc8177 {
+  background-color: transparent;
+}
+
+.wrapper_d852db {
+  background-color: transparent;
+}
+
+.header_a8217b {
+  background-color: transparent;
+}
+
+.divider_d9c882 {
+  background-color: transparent;
+}
+
+.notice__5fd4c,
+.roleRow__5f97b:before,
+.roleRow__5f97b:last-child:after {
+  background-color: transparent;
+}
+
+.theme-dark .auditLog__43dab {
+  border-color: transparent;
+}
+
 .container_c8ffbb {
-    background-color: rgba(var(--color-transparancy), 0.1); /*Да, тут пока что всё намешано в кучу будет, но я со временем это буду менять*/
+  background: transparent;
+}
+
+.theme-dark .outer_c0bea0 {
+  background-color: transparent;
+}
+
+.theme-dark 
+.overlay_c0bea0,
+#app-mount .fullSizeOverlayBackground_c0bea0 {
+  background-color: transparent;
+}
+
+.userProfileInner_c0bea0:before {
+  background-color: transparent;
+}
+
+.userProfileOuterThemed_c0bea0.userProfileOuter_c0bea0,
+.userProfileOuterThemed_c0bea0.userProfileOuter_c0bea0 {
+  background: none;
+}
+
+.avatar__1fed1 {
+  border: none;
+  background-color: transparent;
+}
+
+.theme-dark .container_f369db {
+  background-color: transparent;
+}
+
+.mainCard_f369db .input__0f084 {
+  background-color: transparent;
+}
+
+.sectionDivider__629e4 {
+  background-color: transparent;
+}
+
+.theme-dark .background_c54132 {
+  background-color: transparent;
+}
+
+.header_d9c882 {
+  background-color: transparent;
+}
+
+.container_a8217b {
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.emptyStateContainer__08276 {
+  background-color: transparent;
+}
+
+.header_d0b769,
+.contentContainer__4325e {
+  background-color: transparent;
+}
+
+.roleMessagePreview__3efc4 {
+  background-color: transparent;
+  border: none;
+}
+
+.callContainer_ed4410,
+.scroller_bb12d2,
+.container__93316,
+.participants_b3f0267d72 {
+  background-color: transparent;
+}
+
+.descriptionBox__981f7 {
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+.theme-dark .searchBox_d727b3 {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.member_c8ffbb,
+.members_c8ffbb {
+  background-color: transparent;
+}
+
+.chatHeaderBar_a5700d {
+  background-color: transparent;
+}
+
+.container_adb50a {
+  background-color: transparent;
+}
+
+.theme-dark .gemIndicatorContainer_b03ca0 {
+  background-color: transparent;
+}
+
+.wrapper_b1e4f3 {
+  background-color: transparent;
+}
+
+.theme-dark .card_dc2e44 {
+  border-color: transparent;
+}
+
+.textDivider_d4ced7 {
+  background-color: transparent;
+}
+
+.scrollTierBackground__35455,
+.modalHeader__52f07 {
+  background-color: transparent;
+}
+
+.sourceThumbnail_a2de16 {
+  background-color: transparent;
+}
+
+.headerDivider_ec8d1f {
+  background-color: transparent;
+}
+
+.scroller_d6b206 {
+  background-color: transparent;
+}
+
+.theme-dark .tierPill-l7DvKo {
+  background-color: transparent;
+  color: white;
+}
+
+.groupCollapsedContainer_b6a9f9 {
+  background-color: transparent;
+  border: none;
+}
+
+.theme-dark .panel_bf1a22 {
+  background: none;
+}
+
+.theme-dark .activityProfile__2ef49 .activityName__2ef49,
+.theme-dark .activityProfile__2ef49 .content__2ef49,
+.theme-dark .activityProfile__2ef49 .details__2ef49,
+.theme-dark .activityProfile__2ef49 .name__2ef49,
+.theme-dark .activityProfile__2ef49 .nameNormal__2ef49,
+.theme-dark .activityProfile__2ef49 .nameWrap__2ef49,
+.theme-dark .activityProfileV2__2ef49 .activityName__2ef49,
+.theme-dark .activityProfileV2__2ef49 .content__2ef49,
+.theme-dark .activityProfileV2__2ef49 .details__2ef49,
+.theme-dark .activityProfileV2__2ef49 .name__2ef49,
+.theme-dark .activityProfileV2__2ef49 .nameNormal__2ef49,
+.theme-dark .activityProfileV2__2ef49 .nameWrap__2ef49,
+.theme-dark .activityUserPopout__2ef49 .activityName__2ef49,
+.theme-dark .activityUserPopout__2ef49 .content__2ef49,
+.theme-dark .activityUserPopout__2ef49 .details__2ef49,
+.theme-dark .activityUserPopout__2ef49 .name__2ef49,
+.theme-dark .activityUserPopout__2ef49 .nameNormal__2ef49,
+.theme-dark .activityUserPopout__2ef49 .nameWrap__2ef49,
+.theme-dark .activityUserPopoutV2__2ef49 .activityName__2ef49,
+.theme-dark .activityUserPopoutV2__2ef49 .content__2ef49,
+.theme-dark .activityUserPopoutV2__2ef49 .details__2ef49,
+.theme-dark .activityUserPopoutV2__2ef49 .name__2ef49,
+.theme-dark .activityUserPopoutV2__2ef49 .nameNormal__2ef49,
+.theme-dark .activityUserPopoutV2__2ef49 .nameWrap__2ef49,
+.theme-dark .activityUserPopout__2ef49 [class*="content_"], .theme-dark .activityUserPopout__2ef49 [class*="name_"], .theme-dark .activityUserPopout__2ef49 [class*="details_"], .theme-dark .activityUserPopout__2ef49 [class*="activityName_"], .theme-dark .activityUserPopout__2ef49 [class*="nameNormal_"], .theme-dark .activityUserPopout__2ef49 [class*="nameWrap_"], .theme-dark .activityProfile__2ef49 [class*="content_"], .theme-dark .activityProfile__2ef49 [class*="name_"], .theme-dark .activityProfile__2ef49 [class*="details_"], .theme-dark .activityProfile__2ef49 [class*="activityName_"], .theme-dark .activityProfile__2ef49 [class*="nameNormal_"], .theme-dark .activityProfile__2ef49 [class*="nameWrap_"], .theme-dark .activityProfileV2__2ef49 [class*="content_"], .theme-dark .activityProfileV2__2ef49 [class*="name_"], .theme-dark .activityProfileV2__2ef49 [class*="details_"], .theme-dark .activityProfileV2__2ef49 [class*="activityName_"], .theme-dark .activityProfileV2__2ef49 [class*="nameNormal_"], .theme-dark .activityProfileV2__2ef49 [class*="nameWrap_"], .theme-dark .activitySimplifiedProfile__2ef49 [class*="content_"], .theme-dark .activitySimplifiedProfile__2ef49 [class*="name_"], .theme-dark .activitySimplifiedProfile__2ef49 [class*="details_"], .theme-dark .activitySimplifiedProfile__2ef49 [class*="activityName_"], .theme-dark .activitySimplifiedProfile__2ef49 [class*="nameNormal_"], .theme-dark .activitySimplifiedProfile__2ef49 [class*="nameWrap_"], .theme-dark .activityUserPopoutV2__2ef49 [class*="content_"], .theme-dark .activityUserPopoutV2__2ef49 [class*="name_"], .theme-dark .activityUserPopoutV2__2ef49 [class*="details_"], .theme-dark .activityUserPopoutV2__2ef49 [class*="activityName_"], .theme-dark .activityUserPopoutV2__2ef49 [class*="nameNormal_"], .theme-dark .activityUserPopoutV2__2ef49 [class*="nameWrap_"], .theme-dark .activityBiteSizePopout__2ef49 [class*="content_"], .theme-dark .activityBiteSizePopout__2ef49 [class*="name_"], .theme-dark .activityBiteSizePopout__2ef49 [class*="details_"], .theme-dark .activityBiteSizePopout__2ef49 [class*="activityName_"], .theme-dark .activityBiteSizePopout__2ef49 [class*="nameNormal_"], .theme-dark .activityBiteSizePopout__2ef49 [class*="nameWrap_"] {
+  color: var(--namecolor);
+}
+
+.body_c6f1a4 {
+  background-color: transparent;
+}
+
+.modalHeader_a27f2f {
+  background-image: none;
+}
+
+.selectPlanDivider_d947e6 {
+  background-color: transparent;
+}
+
+.separator_bebc5b {
+  background-color: transparent;
+}
+
+.howItWorksImageContainer_dd30dc {
+  background-color: transparent;
+}
+
+.checklist_d6d7a8 .header__812a7,
+.header__812a7 {
+  background-color: transparent;
+}
+
+.container-ZSFRqx {
+  background-color: transparent;
+  border: none;
+}
+
+.exampleContainer_b34334,
+.exampleModal_b34334,
+.exampleContainer-3KBk_U,
+.exampleModal-3D7ypH,
+.formFieldWrapper-3IiCRS,
+.footer-1voAYT,
+.separator-RaufQu,
+.containerFooter_eaaeee {
+  background-color: transparent;
+}
+
+.actionContainer_bc4513 {
+  background-color: transparent;
+}
+
+.keywordTextArea__4546e {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.container_db5301 {
+  background-color: transparent;
+}
+
+.tagsDivider_d9be46 {
+  background-color: transparent;
+}
+
+#app-mount .stepperContainer_ed9c90 {
+  background: transparent;
+  color: white;
+}
+
+.separator-3PdcLL {
+  background-color: transparent;
+}
+
+.cardHeader_b44011 {
+  background-color: transparent;
+}
+
+.guildSidebar_b962dc,
+.modal_b962dc,
+.theme-dark .footer_b962dc {
+  background-color: transparent;
+}
+
+.divider__9db96 {
+  background: none;
+}
+
+.metadataContainer_c7f964 {
+  background-color: transparent;
+}
+
+.theme-dark .footer_be95d0 {
+  background-color: transparent;
+  color: white;
+}
+
+.theme-dark .container_cc2dff,
+.theme-dark .reactors_cc2dff {
+  background-color: transparent;
+}
+
+.theme-dark .scroller_cc2dff {
+  background: none;
+}
+
+.theme-dark .keyboardShortcutsModal_f061f6 {
+  background-color: transparent;
+}
+
+.chatContent_f75fb0 {
+  background: none;
+}
+
+.theme-dark .container__37e49 {
+  background-color: transparent;
+}
+
+.wrapper__4106a,
+.paymentNote__56a21 {
+  background-color: transparent;
+}
+
+.theme-dark .footer__49fc1 {
+  background-color: transparent;
+}
+
+.modalHeader_ababa2,
+.modalBody_ababa2 {
+  background-color: transparent;
+}
+
+.modalFooter_ababa2 {
+  background-color: transparent !important;
+}
+
+.divider_eae0ef {
+  background-color: transparent;
+}
+
+.bar_c8b06d {
+  background-color: transparent;
+}
+
+.container_fed6d3 {
+  background-color: transparent;
+}
+
+.theme-dark .sidebarContainer_a3a4ce {
+  background: none;
+}
+
+.interactionsContainerHeader_af3b89 {
+  border-top: none;
+  background-color: transparent;
+}
+
+.replyInput__5ba62 {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .25);
+}
+
+.container__0f2e8 {
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  background: none !important;
+  ;
 }
