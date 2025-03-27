@@ -1,4 +1,4 @@
-/*Изнасилованный обрубок, для того чтобы/делать невидимой значительную часть интерфейса*/ 
+/*Изнасилованный обрубок, для того чтобы удалять/делать невидимой значительную часть интерфейса*/
 
 :root {
     --bg-image: var(--theme-background);
@@ -61,7 +61,7 @@
 .theme-dark .layer__960e4,
 .contentRegionScroller__23e6b,
 .scroller__53543 {
-  background-color: transparent; /*Settings*/
+  background-color: transparent !important; /*Settings*/
 }
 
 .container__7d20c {
@@ -73,7 +73,7 @@
 .panels_c48ade,
 .chat_f75fb0,
 .messages-3amgkR {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .theme-dark .container__9293f {
@@ -107,14 +107,15 @@
   background-color: transparent;
 }
 
-.privateChannels__35e86,
+.visual-refresh .privateChannels__35e86,
 .theme-dark .scroller__99e7c,
 .theme-dark .container__133bf,
 .nowPlayingColumn__133bf,
 .scroller_ad8f79,
 .scroller_c100ff,
 .applicationStore_f07d62,
-.scroller__244e5 {
+.scroller__244e5,
+.visual-refresh .tabBody__133bf {
   background: none;
 }
 
@@ -137,7 +138,7 @@
 .guildSeparator__252b6,
 .theme-dark .scroller_ef3116,
 .wrapper_ef3116 {
-  background: none;
+  background: none !important;
 }
 
 .expandedFolderBackground__48112 {
@@ -485,7 +486,7 @@
   background-color: transparent;
 }
 
-.chatContent_f75fb0 {
+.visual-refresh .chatContent_f75fb0 {
   background: none;
 }
 
@@ -541,5 +542,21 @@
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, .25);
   background: none !important;
-  ;
+}
+
+.visual-refresh .panels_c48ade,
+.visual-refresh .sidebar_c48ade:after {
+  background-color: transparent;
+}
+
+.theme-dark .children__9293f:after {
+  background: none;
+}
+
+.visual-refresh .homeWrapper__0920e {
+  background: none;
+}
+
+.visual-refresh .page_c791b2 {
+  background-color: transparent !important;
 }
