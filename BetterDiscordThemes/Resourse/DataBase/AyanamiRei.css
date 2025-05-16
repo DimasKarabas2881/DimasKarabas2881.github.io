@@ -1,0 +1,784 @@
+/*                                            *\
+ \*   DataBase - Evangelion Ayanami Rei Theme \*
+   *\                                           */
+
+@import url(https://dimaskarabas2881.github.io/BetterDiscordThemes/Resourse/DataBase/basic.css);
+:root {
+    --theme-background: url("https://github.com/DimasKarabas2881/DimasKarabas2881.github.io/blob/main/BetterDiscordThemes/Resourse/Images/ayanami_rei-background.jpg?raw=true");
+    --bg-trpcolor: rgba(0, 0, 0, .586);
+
+    --dark-color: rgba(16, 16, 19, 1);
+    --tdark-color: rgba(0, 1, 5, .5);
+    --blue-trpcolor: rgba(31, 62, 117, .4);
+    --blue-tsecondcolor: rgba(43, 60, 131, .95);
+    --blue-basiccolor: #1f3e75;
+    --blue-secondcolor: #3047a7;
+    --blue-thirdcolor: #314bb7;
+    --blue-lightcolor: #246aff;
+    --red-warningcolor: #af1818;
+    --red-basiccolor: #bb1d1d;
+    --namecolor: white;
+    --link-color: #f6656a;
+}
+
+/*                К глубочайшему сожалению в этой херне имеются                */
+/*                мёртвые строчки кода, которые ничего не дела-                */
+/*                ют. Связано это с одним из обновлений непо-                  */
+/*                средственно дискорда. После выполнения 50-и %                */
+/*                всей работы над темой, я начну выявлять и вы-                */
+/*                резать таковые строчки. Этот текст служит мне                */
+/*                памяткой об этом, чтобы я не забыл.                          */
+
+#app-mount .lastPlayed_cc46f0,
+#app-mount .overlayStatusText__668e1,
+#app-mount .gameName_cc46f0,
+.markup__75297,
+.cozy_c19a55 .header_c19a55,
+.theme-dark .markValue_a562c8,        /*Я не помню чё это*/
+.theme-dark .content__487be ol,
+.theme-dark .content__487be p,
+.theme-dark .content__487be ul li,
+.theme-dark .content__487be ul li:before {
+  color: white;
+}
+
+/*
+.visual-refresh .container_a2f514 {
+    background-color: var(--tdark-color);
+}
+
+.container_a2f514 video.ready_a2f514 {
+*/
+
+/*~Убираем косяки~*/        /*Эту хрень бы в basic.css убрать*/
+.theme-dark .panel__5dec7,
+.container_e131a9,
+.theme-dark .content__37e49 {
+    background: transparent;
+    border: transparent;
+}
+
+/*~Общее~*/         /*По моему тут нужно будет делать сартировку...*/
+.wanderingCubes__0b5bb .item__0b5bb {
+    background-color: var(--blue-lightcolor);
+}
+.root__49fc1 {
+    background-color: var(--dark-color);
+}
+
+.appMount__51fd7 { /*Цвет верхней панельки*/
+    background-color: var(--dark-color);
+}                                            /*Под вопросом*/
+.wordmark__421ed { /*Надпись Discord*/
+    color: var(--blue-lightcolor);
+}
+
+.text-md\/normal_cf4812,
+.text-xs\/normal_cf4812, /*Текст типо белый... да*/
+.text-sm\/normal_cf4812 {
+    color: white !important;
+}
+
+.theme-dark .tooltipPrimary__382e7,
+.theme-dark .tooltipNested__382e7 {
+    background-color: var(--blue-basiccolor);
+}
+.theme-dark .tooltipPrimary__382e7 .tooltipPointer__382e7 {/*Всплывающие облочка при наведении*/
+    border-top-color: var(--blue-secondcolor);
+}
+.theme-dark .tooltip__382e7 {
+    box-shadow: none;
+    color: white;
+}
+
+.container__87bf1 {
+    border-radius: 5px;
+    border-color: transparent !important;
+    background-color: var(--tdark-color) !important;
+    width: 40px;
+    height: 24px;
+    border: none;
+}
+.container__87bf1 rect { /*Переключакалки*/
+    fill: var(--blue-basiccolor);
+    rx: 5;
+}
+.container__87bf1 path {
+    fill: white;
+}
+.slider__87bf1 {
+    height: 18px;
+}
+
+.item__001a7 {
+    background-color: var(--tdark-color);
+    border-radius: 7px;
+    border: 2px solid transparent;
+}
+.item__001a7:hover:not([aria-checked=true]):not(.disabled__001a7) {
+    border-color: var(--blue-tsecondcolor); /*Тык-тык кнопки типо выбор переключакалка хз как назвать*/
+    background-color: var(--tdark-color);
+    color: white;
+}
+.itemFilled__001a7[aria-checked=true] {
+    background-color: var(--blue-tsecondcolor);
+}
+
+.standardSidebarView__23e6b a,
+.imageDetails-1t6Zms a,
+.primary-jw0I4K a,
+.footer_c33701 a,
+.lookLink__201d5.colorLink__201d5,
+.bda-slist .bda-footer a,
+.markup__75297 a,
+.welcomeMessage-ULm0mo a,
+.theme-dark .filenameLinkWrapper__0ccae,
+.theme-dark .filenameLinkWrapper__0ccae a,
+.topic__6ec1a a,
+.emptyStateCTA_ac6cb0 a,
+.helpText-h3r3wC a,                 /*Ссылочки*/
+.colorStandard_fbc755 a,
+.editChannelButton-1dYN-G,
+.fakeLink_ada32f,
+.button__6e3f1,
+.footerText__67dba a,
+.mutedChannelsHook_f1ed13,
+.audioMetadata_cf09d8 .metadataDownload_cf09d8,
+.anchor_edefb8 {
+  color: var(--link-color);
+}
+
+.theme-dark .container_f89b2c {
+    background-color: var(--tdark-color);
+    border-radius: 8px;
+}
+.recorderContainer__2636e:not(.containerDisabled__2636e):focus-within,
+.recorderContainer__2636e:not(.containerDisabled__2636e):hover { /*Ну ээ... Штука короче да...*/
+    border-color: var(--blue-lightcolor);
+}
+.lookFilled__201d5.colorPrimary__201d5 {
+    border-radius: 7px;
+}
+
+.lookFilled__3f413.select__3f413 {
+    background-color: var(--dark-color);
+    border-color: var(--blue-secondcolor);
+    color: white;
+}
+.lookFilled__3f413.select__3f413:focus { /*Раздвижной штука выбар*/
+    border-color: var(--blue-secondcolor);
+}
+.lookFilled__3f413.select__3f413:hover.open__3f413,
+.theme-dark .lookFilled__3f413.open__3f413 {
+  border-color: var(--blue-secondcolor) var(--blue-secondcolor) rgba(0, 0, 0, .3);
+}
+/*Это относится к верхней херне*/
+.theme-dark .popout__3f413 {
+    background-color: var(--dark-color);
+    box-shadow: none;
+    color: white;
+    border-color: var(--blue-secondcolor);
+}
+.option__3f413 {
+    color: white;
+}
+.option__3f413.focused__3f413,
+.option__3f413:focus,
+.option__3f413:hover {
+    background-color: #263268;
+    color: white;
+}
+.option__3f413[aria-selected=true]:not(.option__3f413.multi__3f413) {
+    color: white;
+    background-color: var(--blue-secondcolor);
+}
+.selectedIcon__3f413 {
+    color: var(--blue-secondcolor);
+}
+
+.visual-refresh .cardPrimary__73069,
+.visual-refresh .cardPrimary__73069.editable__73069 {
+    border-color: var(--blue-secondcolor);
+}              /*...*/
+.visual-refresh .card__73069:not(.outline__73069) {
+    border-color: var(--blue-secondcolor);
+    background-color: rgba(0, 1, 5, .15);
+}
+
+.defaultColor__4bd52 {
+    color: white;  /*Ещё текст белый*/
+}
+
+.visual-refresh .grabber_a562c8 {
+    border-radius: 25%;
+    background-color: var(--blue-basiccolor);
+    border: none;
+    box-shadow: none;
+}
+.visual-refresh .bar_a562c8 {
+    background: var(--dark-color);
+    border-radius: 1;
+}
+.visual-refresh .bar_a562c8[style*="background"] {    /*Ползуночки*/
+    background-color: var(--dark-color) !important;
+}
+.visual-refresh .barFill_a562c8 {
+    background: var(--blue-thirdcolor);
+    border: transparent;
+}
+.visual-refresh .barFill_a562c8[style*="background"] {
+    background: var(--blue-thirdcolor) !important;
+    border: transparent;
+}
+.theme-dark .markDash_a562c8 {
+    background: none;
+}
+
+.lookOutlined__201d5.colorRed__201d5 {
+    color: white;
+    border-color: var(--red-warningcolor) !important;
+}                                      /*Красная кнопка типа "Удалить нахуй???"*/
+.lookOutlined__201d5.colorRed__201d5:hover {
+    background-color: var(--red-warningcolor);
+    color: white;
+}
+
+.nitroWheel_c3d948,
+:where(.visual-refresh) .premiumIcon__67a11,  /*Nitro*/
+:where(.visual-refresh) .premiumIcon_a00e6e,
+.nitroWheel__722a8,
+.nitroWheel_c5f0dc,
+.premiumIcon__9d295 {
+    color: #b746bd;
+}
+
+/*-------Настройки-------*/
+/*~~Положение панелей/ползуночек~~*/
+
+.sidebarRegion__23e6b {
+    flex: none;
+}
+
+.contentColumn__23e6b, .customColumn__23e6b {
+    left: 262px;
+}                                        /*Обожаю костыли*/
+.contentRegionScroller__23e6b .tools__23e6b {
+    left: 1800px;
+}
+
+.scroller-2FKFPG::-webkit-scrollbar {
+    width: 21px;
+}
+
+.auto_d125d2::-webkit-scrollbar-thumb,
+.auto__99f8c::-webkit-scrollbar-thumb {
+    background-color: var(--blue-basiccolor);
+    border-color: transparent;
+}
+
+.auto_d125d2::-webkit-scrollbar-thumb,
+.auto__99f8c::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.auto_d125d2::-webkit-scrollbar-thumb,
+.auto__99f8c::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+.auto_d125d2::-webkit-scrollbar-track,
+.auto__99f8c::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+}
+
+.theme-dark .closeButton_c2b141 {
+    border-color: transparent;
+    background-color: var(--blue-trpcolor);
+}
+.closeButton_c2b141:hover {
+    background-color: rgba(29, 58, 113, .6);
+}
+
+.closeButton_c2b141:hover, .closeButton_c2b141:hover+.keybind_c2b141 {
+    color: white;
+}
+
+.closeButton_c2b141 {
+    border-radius: 7px;
+}
+
+/*~~Боковая панель~~*/
+
+.container_fea832 {
+    border-radius: 12px;
+    background-color: var(--dark-color);
+}
+
+.medium_fea832 .iconContainer_fea832 {
+    width: 16px;
+    height: 16px;
+}
+
+.input_fea832, .icon_fea832, .input_a45028 {
+    color: white;
+}
+
+*::-webkit-input-placeholder {
+    color: white !important;
+}
+
+.selected_b3f026.item_b3f026,
+.selected_b3f026.item_b3f026:hover,
+.themed_b3f026.item_b3f026:hover,
+.input__48d49,
+.icon_fb52f0,
+.theme-dark .member-1q7VfX .tag-1YGWN9 {
+    color: white;
+}
+
+.header_b3f026 {
+    background-color: rgba(255, 255, 255, .13);
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.visual-refresh .separator_b3f026,
+.divider-1aB8TP,
+.theme-dark #bd-settings-sidebar .ui-tab-bar-separator {
+    background-color: transparent;
+}
+
+.sidebar__23e6b {
+    width: 318px;
+    padding: 60px 58px 60px 60px;
+}
+
+.visual-refresh .side_b3f026 .themed_b3f026.item_b3f026:hover:not(.disabled_b3f026),
+.topPill_b3f026 .themed_b3f026.item_b3f026:hover:not(.disabled_b3f026) {
+    background-color: var(--blue-trpcolor);
+    border-radius: 6px;
+}
+
+.side_b3f026 .themed_b3f026.selected_b3f026.item_b3f026, .topPill_b3f026 .themed_b3f026.selected_b3f026.item_b3f026 {
+    background-color: var(--blue-basiccolor) !important;
+    border-radius: 6px;
+}
+
+.tabBarItemContainer_c7e907 svg {
+    color: var(--red-warningcolor);
+}
+
+.thin_d125d2::-webkit-scrollbar,
+.thin__99f8c::-webkit-scrollbar {
+    width: 10px;
+}
+
+.thin_d125d2::-webkit-scrollbar-thumb,
+.thin__99f8c::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: var(--blue-basiccolor);
+}
+
+.thin_d125d2::-webkit-scrollbar-track,
+.thin__99f8c::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: none;
+}
+
+/*Немного HypeSquad*/
+
+.feature__4626b, .leaveActionWrapper__964b4{
+    border-color: transparent;
+}
+:where(.visual-refresh).theme-dark .lookLink__201d5.colorLink__201d5 {
+    color: var(--link-color);
+}
+
+/*~~BD-Хрень в настройках~~*/
+
+.bd-addon-list .bd-addon-header {
+    color: white;
+    background: transparent;
+    overflow: visible
+}
+
+.bd-sidebar-header h2 {
+    color: white;
+}
+
+#app-mount .bd-button {
+    background-color: var(--blue-basiccolor);
+}
+
+.bd-search-wrapper {
+    background-color: transparent;
+}
+
+.bd-search-wrapper>svg {
+    fill: white;
+}
+
+.bd-select-value {
+    color: white;
+}
+
+.theme-dark .bd-addon-list .bd-addon-card {
+    background-color: var(--tdark-color);
+    color: white;
+    border-color: var(--blue-basiccolor);
+}
+
+.bd-switch-body {
+    border-radius: 5px;
+    background-color: var(--tdark-color) !important;
+}
+.bd-switch-body .bd-switch-slider rect {
+    fill: var(--blue-basiccolor);
+    rx: 5;
+}
+.bd-switch .bd-switch-symbol path {
+    fill: white;
+}
+
+.bd-select .bd-select-options {
+    background-color: var(--blue-basiccolor);
+    box-shadow: none;
+    color: white;
+    border: none;
+}
+
+.bd-store-card {
+    padding: 10px;
+    border: 2px solid;
+    border-color: transparent;
+    background-color: var(--tdark-color);
+    border-radius: 5px;
+}
+.bd-store-card:hover {
+    border-color: var(--blue-secondcolor);
+}
+
+.bd-settings-title.bd-settings-group-title {
+    color: white;
+}
+.bd-settings-group.collapsible .bd-settings-title::before {
+    background-color: transparent;
+}
+.bd-divider {
+    border-top: none;
+}
+
+.bd-select {
+    color: white;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.bd-select:hover, .bd-select.menu-open {
+    background-color: rgba(41, 56, 119, .7);
+    border-color: transparent;
+}
+
+.bd-slider-track {
+    background-color: var(--dark-color);
+    background-image: linear-gradient(var(--blue-lightcolor), var(--blue-lightcolor));
+}
+
+.bd-number-input {
+    background-color: var(--tdark-color);
+    border: 1px solid transparent;
+    color: white;
+}
+
+/*~~Настройки активности~~*/
+
+.expandedContainer__9d98d,
+.groupHeader__9d98d {
+    background: none;
+}
+
+.wrapper_e03935 {
+    border-color: var(--blue-tsecondcolor);
+    background-color: rgba(0, 1, 5, .15);
+}
+.selected_e03935.option_e03935 {
+    background-color: var(--blue-tsecondcolor) !important;
+    border-color: transparent !important;
+    opacity: .95 !important;
+    box-shadow: none;
+}
+.option_e03935:hover {
+    background-color: var(--tdark-color);
+    border-color: var(--blue-secondcolor);
+    box-shadow: none;
+    opacity: .6;
+}
+.option_e03935 {
+    background-color: var(--tdark-color);
+    box-shadow: none;
+    border: 2px solid transparent;
+}
+
+.disabled_e03935 svg {
+    color: var(--dark-color);
+}
+.disabled_e03935:hover svg {
+    color: var(--red-warningcolor);
+}
+
+.theme-dark .game_cc46f0 {
+    box-shadow: none;
+}
+
+.lookLink__201d5.colorLink__201d5:hover
+.contents__201d5 {
+    background-image: linear-gradient(0deg, transparent, transparent 1px, var(--link-color) 0, var(--link-color) 2px, transparent 0);
+}
+
+.default_e18686 {
+    background-color: var(--tdark-color);
+    border-radius: 5px;
+    box-shadow: none !important;
+    background-image: url(https://dimaskarabas2881.github.io/BetterDiscordThemes/Resourse/svg/14c3c4a641591d42.svg);
+}
+
+.toggleIconOff_cc46f0 .fill_cc46f0 {
+    fill: var(--red-basiccolor);
+}
+
+.gameNameInput_cc46f0:focus,
+.gameNameInput_cc46f0:hover {
+    background-color: var(--tdark-color);
+}
+
+.divider__46c3b {
+    border-color: transparent;
+}
+
+.notDetected_cc46f0 {
+    background-color: var(--tdark-color);
+}
+
+.visual-refresh .collapseable__217b7 {
+    background-color: var(--tdark-color);
+    border: 2px solid transparent;
+}
+
+.visual-refresh .collapseable__217b7:hover,
+.visual-refresh .toggled__217b7 {
+    border-color: var(--blue-secondcolor);
+}
+
+.visual-refresh .collapseable__217b7:active {
+    background-color: rgba(0, 0, 0, .76);
+}
+
+.groupContainer__9d98d,
+.standaloneContainer__9d98d {
+    background-color: transparent;
+}
+
+.groupCollapsedContainer__9d98d {
+    background-color: transparent;
+}
+
+.voiceWidgetContainer__9d98d {
+    background: rgba(0, 1, 5, .35);
+}
+
+/*~~Настройки приложения~~*/
+
+.lookFilled__201d5.colorBrand__201d5,
+.lookFilled__201d5.colorBrand__201d5:disabled,
+.lookOutlined__201d5.colorBrand__201d5,
+.lookInverted_a299dc.colorBrand__201d5 {
+   color: white;
+   background-color: var(--blue-secondcolor);
+   border-color: transparent;
+}
+.lookFilled__201d5.colorBrand__201d5:hover,
+.lookInverted_a299dc.colorBrand__201d5:hover,
+.lookOutlined__201d5.colorBrand__201d5:hover,
+.theme-dark .create-3jownz:hover .actionButton-2PeQbJ {
+    background-color: var(--blue-thirdcolor) !important;
+}
+
+.theme-dark .row__740f2 {
+    box-shadow: inset 0 -1px 0 rgba(16, 16, 19, .4);
+}
+
+.theme-dark .button_e18686 {
+    background-image: url(https://dimaskarabas2881.github.io/BetterDiscordThemes/Resourse/svg/14c3c4a641591d42.svg);
+    background-color: var(--tdark-color); !important;
+    border-radius: 5px;
+    box-shadow: none !important;
+}
+
+.theme-dark .combo_fcddc1 .key_fcddc1 {
+    color: white !important;
+    box-shadow: none;
+    border: 1px solid #4059c3;
+    background-color: #2d47b3;
+}
+
+.cameraWrapper_d41d5f {
+    background-color: var(--tdark-color);
+    border: none;
+}
+
+.backgroundOptionRing__53965 {
+    border: 2px solid var(--blue-secondcolor);
+}
+.backgroundOptionInner__53965 {
+    background-color: transparent;
+}
+
+.soundButtonSettingContainer__84bad {
+    background-color: var(--tdark-color);
+}
+
+.visual-refresh .cardPrimary__73069 {
+    background-color: rgba(0, 1, 5, .2);
+}
+.visual-refresh .cardPrimary__73069.outline__73069 {
+    border-color: rgb(0, 0, 255, .5);
+}
+
+.darkIcon__36dee {
+    background: var(--tdark-color);
+}
+
+.selectionCircle__36dee {
+    box-shadow: inset 0 0 0 2px var(--blue-thirdcolor), inset 0 0 0 4px var(--blue-basiccolor);
+}
+.checkmark__36dee {
+    color: var(--blue-thirdcolor);
+}
+
+.lightIcon__36dee {
+    background-image: url(https://dimaskarabas2881.github.io/BetterDiscordThemes/Resourse/svg/14c3c4a641591d42.svg);
+    background-size: cover;
+}
+
+.card_b846e5:before {
+    background-color: transparent;
+    border-color: var(--blue-secondcolor);
+}
+
+/*~~Настройки выставления счетов~~*/
+
+.theme-dark .hr__70151 {
+    border-color: transparent;
+}
+
+.wrapper__5b98e {
+    background-color: var(--tdark-color);
+}
+
+.listItem__5b98e,
+.list__5b98e {
+    border-color: transparent;
+}
+
+.booleanValueIcon__686cf {
+    color: white;
+}
+.booleanValueTrue__686cf {
+    color: #70ab82;
+}
+
+.columnHeading__686cf, .tableCell__686cf {
+    border-color: rgba(120, 120, 150, .4);
+}
+
+.guildContainer__5dba5 {
+    background-color: var(--tdark-color);
+}
+
+.lookFilled__201d5.colorPrimary__201d5 {
+    color: white;
+    background-color: transparent !important;
+    border: 1px solid #4f545c;
+}
+
+.wave__8e08c {
+    fill: var(--tdark-color);
+}
+
+.card__4d7bb {
+    background-color: var(--tdark-color);
+}
+
+/*~~Настройки пользователя~~*/
+
+.connection_c7f964 {
+    background-color: var(--blue-trpcolor);
+    border-radius: 7px;
+}
+
+.connectContainer_c7f964 {
+    background-color: var(--blue-trpcolor);
+    border-radius: 7px;
+}
+
+.connectionHeader_c7f964 {
+    background-color: transparent;
+}
+
+.accountButtonInner_c7f964 {
+    background-color: var(--blue-thirdcolor);
+    border: 3px solid transparent;
+}
+
+.accountButtonInner_c7f964:hover {
+    background-color: rgba(49, 75, 183, .6);
+    border: 3px outset var(--blue-lightcolor);
+}
+
+.sessionMoreButton__803f2:hover {
+    color: var(--red-warningcolor);
+}
+
+.container_a45028 {
+    background-color: var(--tdark-color);
+}
+.icon_a45028 {
+    color: white;
+}
+
+.colorStandard_c9946a {
+    color: white;
+}
+
+.eyebrow_cf4812 {
+    color: white !important;
+}
+
+.card__5cea9 {
+    background-color: var(--tdark-color);
+}
+.header__5cea9 {
+    background-color: transparent;
+}
+
+.lookFilled__201d5.colorPrimary__201d5:hover {
+    border-color: var(--blue-basiccolor);
+}
+
+.input__0f084 {
+    border-radius: 6px;
+    color: white;
+    background-color: rgba(0, 0, 0, .26);
+    border: 1px solid transparent;
+}
+.input__0f084:hover {
+    background-color: rgba(0, 0, 0, .46);
+    border-color: transparent;
+}
+.input__0f084.focused__0f084,
+.input__0f084:focus {
+    border-color: var(--blue-secondcolor) !important;
+    background-color: rgba(0, 0, 0, .76);
+}
