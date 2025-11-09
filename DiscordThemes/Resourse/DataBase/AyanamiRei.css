@@ -2,9 +2,9 @@
  \*   DataBase - Evangelion Ayanami Rei Theme \*
    *\                                           */
 
-@import url(https://dimaskarabas2881.github.io/BetterDiscordThemes/Resourse/DataBase/basic.css);
+@import url(https://dimaskarabas2881.github.io/DiscordThemes/Resourse/DataBase/basic.css);
 :root {
-    --theme-background: url("https://github.com/DimasKarabas2881/DimasKarabas2881.github.io/blob/main/BetterDiscordThemes/Resourse/Images/ayanami_rei-background.jpg?raw=true");
+    --theme-background: url("https://github.com/DimasKarabas2881/DimasKarabas2881.github.io/blob/main/DiscordThemes/Resourse/Images/ayanami_rei-background.jpg?raw=true");
     --bg-trpcolor: rgba(0, 0, 0, .586);
 
     --dark-color: rgba(16, 16, 19, 1);
