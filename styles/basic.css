@@ -1,0 +1,73 @@
+@import "index.css";
+
+:root {
+  /* ===== ОСНОВА ===== */
+  --page-background: linear-gradient();
+  --text-color: #1a1a1a;
+  --card-background: #ffffff;
+  
+  /* ===== ТИПОГРАФИКА ===== */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* ===== РАДИУСЫ ===== */
+  --radius: 12px;
+  
+  /* ===== ОТСТУПЫ ===== */
+  --spacing: 20px;
+  
+  /* ===== ТЕНИ ===== */
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  /* ===== КНОПКИ ===== */
+  --button-bg: linear-gradient(135deg, #ffd700, #f5a623);
+  --button-text: #1a1a1a;
+  --button-radius: 8px;
+  --button-padding: 14px 32px;
+  --button-font-size: 16px;
+  --button-font-weight: 700;
+  --button-shadow-color: rgba(255, 215, 0, 0.4);
+  --button-shadow-hover: 0 4px 20px rgba(255, 215, 0, 0.6);
+  --button-scale-hover: 1.03;
+  --button-transition: all 0.3s ease;
+}
+
+body {
+  background: var(--page-background);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== КНОПКИ ===== */
+.button-main {
+  display: inline-block;
+  padding: var(--button-padding);
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-weight: var(--button-font-weight);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--button-radius);
+  cursor: pointer;
+  transition: var(--button-transition);
+  font-size: var(--button-font-size);
+  text-align: center;
+}
+
+/* Адаптация для ссылок (чтобы убирать подчёркивание) */
+a.button-main {
+  text-decoration: none;
+}
+
+/* Адаптация для кнопок (чтобы убирать стандартные рамки) */
+button.button-main {
+  border: none;
+  cursor: pointer;
+}
+
+/* Эффект при наведении (для всех) */
+.button-main:hover {
+  transform: scale(var(--button-scale-hover));
+  box-shadow: var(--button-shadow-hover);
+}

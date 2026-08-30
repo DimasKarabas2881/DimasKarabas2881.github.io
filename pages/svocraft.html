@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>СВОкрафт</title>
+	<link rel="stylesheet" type="text/css" href="../styles/svocraft.css">
+</head>
+
+<body>
+    <div id="app-status" style="position: fixed; top: 10px; right: 20px; color: #888; font-size: 12px; z-index: 999;">
+        Загрузка...
+    </div>
+
+    <!-- ===== ЭКРАН 1: НАСТРОЙКА ===== -->
+    <section id="screen-setup" class="screen active">
+        <div class="container">
+            <h1>СВОкрафт</h1>
+            <p>Настройка отряда перед миссией</p>
+
+            <div class="setup-group">
+                <label>Выберите команду:</label>
+                <div id="team-selector">
+                    <button class="team-btn" data-team="nato">НАТО</button>
+                    <button class="team-btn" data-team="soviets">Советы</button>
+                    <button class="team-btn" data-team="rebels">Повстанцы</button>
+                </div>
+            </div>
+
+            <div class="setup-group">
+                <label>Количество человек:</label>
+                <input type="number" id="squad-size" value="4" min="1" max="20">
+            </div>
+
+            <button id="start-shop" class="button-main">➜ В магазин</button>
+        </div>
+    </section>
+
+    <!-- ===== ЭКРАН 2: КАТАЛОГ ===== -->
+    <section id="screen-shop" class="screen">
+        <div class="container">
+            <div class="shop-header">
+                <div>
+                    <span>Бюджет: </span>
+                    <span id="budget-display">0</span>
+                </div>
+                <div>
+                    <span>Куплено: </span>
+                    <span id="cart-count">0</span>
+                </div>
+                <button id="finish-shop" class="button-main">Готово</button>
+            </div>
+
+            <div id="category-nav"></div>
+            <div id="breadcrumbs">Каталог</div>
+            <div id="items-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== ЭКРАН 3: ИТОГИ ===== -->
+    <section id="screen-result" class="screen">
+        <div class="container">
+            <h1>Итоги</h1>
+            <div id="result-content"></div>
+            <div style="display: flex; gap: 12px; margin-top: 20px;">
+                <button id="back-to-shop" class="button-main">Вернуться</button>
+                <button id="reset-all" class="button-main">Заново</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="../scripts/svocraft.js"></script>
+</body>
+
+</html>

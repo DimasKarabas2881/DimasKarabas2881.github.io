@@ -1,0 +1,1992 @@
+{
+  "teams": {
+    "nato": {
+      "id": "nato",
+      "label": "НАТО",
+      "color": "#0056a7",
+      "bgColor": "#e8f0fe",
+      "budgetPerPerson": 30,
+      "enemyTeams": ["soviets"],
+      "icon": "🇺🇸"
+    },
+    "soviets": {
+      "id": "soviets",
+      "label": "Советы",
+      "color": "#cc0000",
+      "bgColor": "#fce8e8",
+      "budgetPerPerson": 30,
+      "enemyTeams": ["nato"],
+      "icon": "🇷🇺"
+    },
+    "rebels": {
+      "id": "rebels",
+      "label": "Повстанцы",
+      "color": "#2e7d32",
+      "bgColor": "#e8f5e9",
+      "budgetPerPerson": 15,
+      "enemyTeams": ["nato", "soviets"],
+      "icon": "🪖"
+    }
+  },
+
+  "catalog": {
+    "vehicles": {
+      "id": "vehicles",
+      "label": "Техника",
+      "icon": "🚜",
+      "subcategories": {
+        "ground": {
+          "id": "ground",
+          "label": "Наземная техника",
+          "icon": "🚜",
+          "subcategories": {
+            "tanks": {
+              "id": "tanks",
+              "label": "Танки",
+              "icon": "🔫",
+              "items": [
+                {
+                  "id": "t-90a",
+                  "name": "Т-90А",
+                  "image": "t-90a.png",
+                  "baseCost": 100,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Основной боевой танк",
+                    "crew": "—",
+                    "hpRPG": 6.5,
+                    "hpJavelin": 4,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Танк нахуй"
+                  },
+                  "shortDesc": "Основной боевой танк. Композитная броня, ПТУР."
+                },
+                {
+                  "id": "t-80u",
+                  "name": "Т-80У",
+                  "image": "t-80u.png",
+                  "baseCost": 95,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Основной боевой танк",
+                    "crew": "—",
+                    "hpRPG": 6,
+                    "hpJavelin": 4,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Немного меньше хп чем у Т-90"
+                  },
+                  "shortDesc": "Скоростной танк с газотурбинным двигателем."
+                },
+                {
+                  "id": "t-80bv",
+                  "name": "Т-80БВ",
+                  "image": "t-80bv.png",
+                  "baseCost": 95,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Основной боевой танк",
+                    "crew": "—",
+                    "hpRPG": 6,
+                    "hpJavelin": 4,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Другое имя Т-80У"
+                  },
+                  "shortDesc": "Модификация Т-80У с улучшенной броней."
+                },
+                {
+                  "id": "ztz-99a",
+                  "name": "ZTZ-99A",
+                  "image": "ztz-99a.png",
+                  "baseCost": 105,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Основной боевой танк",
+                    "crew": "—",
+                    "hpRPG": 7,
+                    "hpJavelin": 4.5,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Т-90А но без ПТУРА и немного крепче"
+                  },
+                  "shortDesc": "Китайский ОБТ, крепче Т-90А."
+                },
+                {
+                  "id": "abrams-sep",
+                  "name": "M1A2 Абрамс SEP",
+                  "image": "abrams.png",
+                  "baseCost": 100,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Основной боевой танк",
+                    "crew": "—",
+                    "hpRPG": 6,
+                    "hpJavelin": 3.5,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Не работает (в таблице)"
+                  },
+                  "shortDesc": "Американский танк с броней из обогащённого урана."
+                },
+                {
+                  "id": "abrams-m1a2",
+                  "name": "ОБТ М1А2",
+                  "image": "abrams-m1a2.png",
+                  "baseCost": 105,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Основной боевой танк",
+                    "crew": "—",
+                    "hpRPG": 4.5,
+                    "hpJavelin": 3,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Менее живуч"
+                  },
+                  "shortDesc": "ОБТ М1А2. Меньше хп, чем у SEP."
+                },
+                {
+                  "id": "sprut-sd",
+                  "name": "Спрут-СД",
+                  "image": "sprut.png",
+                  "baseCost": 70,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Лёгкий танк / САУ",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Танк без брони + второй пулемёт"
+                  },
+                  "shortDesc": "Лёгкий плавающий танк с мощной пушкой."
+                },
+                {
+                  "id": "obt-t-90a",
+                  "name": "ОБТ Т-90А",
+                  "image": "obt-t-90a.png",
+                  "baseCost": 90,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Основной боевой танк",
+                    "crew": "—",
+                    "hpRPG": 5.5,
+                    "hpJavelin": 3,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "во всём хуже другого"
+                  },
+                  "shortDesc": "ОБТ Т-90А. Хуже обычного Т-90А."
+                },
+                {
+                  "id": "obt-ztz-99a",
+                  "name": "ОБТ ZTZ-99A",
+                  "image": "ztz-99a.png",
+                  "baseCost": 100,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Основной боевой танк",
+                    "crew": "—",
+                    "hpRPG": 4.5,
+                    "hpJavelin": 3.5,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Ну танк, чё ещё"
+                  },
+                  "shortDesc": "Китайский ОБТ."
+                }
+              ]
+            },
+            "ifv": {
+              "id": "ifv",
+              "label": "БМП / БТР",
+              "icon": "🛡️",
+              "items": [
+                {
+                  "id": "bmd-4",
+                  "name": "БМД-4",
+                  "image": "bmd-4.png",
+                  "baseCost": 80,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Боевая машина десанта",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "ПТУР+Танковое орудие"
+                  },
+                  "shortDesc": "БМД с ПТУР и танковым орудием."
+                },
+                {
+                  "id": "m3a3-bradley",
+                  "name": "M3A3 Брэдли",
+                  "image": "m3a3-bradley.png",
+                  "baseCost": 60,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Боевая машина пехоты",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Тайфун но с ПТУРом"
+                  },
+                  "shortDesc": "БМП НАТО с ПТУР."
+                },
+                {
+                  "id": "m3a3-bradley-busk",
+                  "name": "M3A3 Брэдли BUSK",
+                  "image": "m3a3-bradley-busk.png",
+                  "baseCost": 70,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Боевая машина пехоты",
+                    "crew": "—",
+                    "hpRPG": 4,
+                    "hpJavelin": 2.5,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Брэдли но круче"
+                  },
+                  "shortDesc": "Улучшенная версия Брэдли."
+                },
+                {
+                  "id": "m3a3-bradley-busk-2",
+                  "name": "M3A3 Брэдли BUSK (2)",
+                  "image": "m3a3-bradley-busk-2.png",
+                  "baseCost": 80,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Боевая машина пехоты",
+                    "crew": "—",
+                    "hpRPG": 4.5,
+                    "hpJavelin": 3,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Брэдли но ещё круче"
+                  },
+                  "shortDesc": "Ещё более улучшенная Брэдли."
+                },
+                {
+                  "id": "zbd-04a",
+                  "name": "ZBD-04A",
+                  "image": "zbd-04a.png",
+                  "baseCost": 90,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Боевая машина пехоты",
+                    "crew": "—",
+                    "hpRPG": 3.5,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "БМП с вооружением танка"
+                  },
+                  "shortDesc": "Китайская БМП с мощным вооружением."
+                },
+                {
+                  "id": "m3a3-bradley-ifv",
+                  "name": "М3А3 Bradley IFV",
+                  "image": "m3a3-bradley-ifv.png",
+                  "baseCost": 50,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Боевая машина пехоты",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Немного круче Тайфуна"
+                  },
+                  "shortDesc": "Базовая версия Брэдли."
+                },
+                {
+                  "id": "bmp-2",
+                  "name": "БМП-2",
+                  "image": "bmp-2.png",
+                  "baseCost": 70,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Боевая машина пехоты",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Дохуя пушек"
+                  },
+                  "shortDesc": "Советская БМП с автоматической пушкой."
+                },
+                {
+                  "id": "m2-bradley",
+                  "name": "М2 Bradley",
+                  "image": "m2-bradley.png",
+                  "baseCost": 75,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Боевая машина пехоты",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Копия БМП-2"
+                  },
+                  "shortDesc": "Американский аналог БМП-2."
+                }
+              ]
+            },
+            "light": {
+              "id": "light",
+              "label": "Лёгкий транспорт",
+              "icon": "🚙",
+              "items": [
+                {
+                  "id": "taifun-k",
+                  "name": "Тайфун-К",
+                  "image": "taifun-k.png",
+                  "baseCost": 45,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Лёгкий бронеавтомобиль",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Быстрый почти-танк"
+                  },
+                  "shortDesc": "Быстрый броневик с пулемётом."
+                },
+                {
+                  "id": "humvee-rws",
+                  "name": "Хамви RWS",
+                  "image": "humvee-rws.png",
+                  "baseCost": 35,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Лёгкий бронеавтомобиль",
+                    "crew": "—",
+                    "hpRPG": 2,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Пулемёт с большим уроном, быстрый"
+                  },
+                  "shortDesc": "Быстрый пулемётный пикап."
+                },
+                {
+                  "id": "humvee-mk19",
+                  "name": "Хамви MK19",
+                  "image": "humvee-mk19.png",
+                  "baseCost": null,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Лёгкий бронеавтомобиль",
+                    "crew": "—",
+                    "hpRPG": 2,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Оружие не работает"
+                  },
+                  "shortDesc": "Оружие не работает (шлак)."
+                },
+                {
+                  "id": "ural-4320",
+                  "name": "Урал-4320",
+                  "image": "ural-4320.png",
+                  "baseCost": 15,
+                  "team": "neutral",
+                  "specs": {
+                    "type": "Грузовой автомобиль",
+                    "crew": "—",
+                    "hpRPG": 2,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Грузовик бля"
+                  },
+                  "shortDesc": "Обычный грузовик."
+                },
+                {
+                  "id": "lav-150-commando",
+                  "name": "LAV-150 Commando",
+                  "image": "lav-150.png",
+                  "baseCost": 45,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Лёгкий бронеавтомобиль",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Тайфун но американский"
+                  },
+                  "shortDesc": "Американский аналог Тайфуна."
+                },
+                {
+                  "id": "lav-25",
+                  "name": "LAV-25",
+                  "image": "lav-25.png",
+                  "baseCost": 55,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Лёгкий бронеавтомобиль",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "LAV-150 но с ПТУРом"
+                  },
+                  "shortDesc": "LAV-150 с ПТУР."
+                },
+                {
+                  "id": "pickup-mg",
+                  "name": "Пикап с пулемётом",
+                  "image": "pickup-mg.png",
+                  "baseCost": 20,
+                  "team": "neutral",
+                  "specs": {
+                    "type": "Лёгкий транспорт",
+                    "crew": "—",
+                    "hpRPG": 1,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Большой урон"
+                  },
+                  "shortDesc": "Пикап с пулемётом."
+                },
+                {
+                  "id": "pickup-atgm",
+                  "name": "Пикап с ПТРК",
+                  "image": "pickup-atgm.png",
+                  "baseCost": 25,
+                  "team": "neutral",
+                  "specs": {
+                    "type": "Лёгкий транспорт",
+                    "crew": "—",
+                    "hpRPG": 1,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "ПТРК, круто"
+                  },
+                  "shortDesc": "Пикап с ПТРК."
+                }
+              ]
+            },
+            "artillery": {
+              "id": "artillery",
+              "label": "Артиллерия",
+              "icon": "💥",
+              "items": [
+                {
+                  "id": "toc-1a-solntsepyok",
+                  "name": "TOC-1A Солнцепёк",
+                  "image": "toc-1a.png",
+                  "baseCost": null,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Тяжёлая огнемётная система",
+                    "crew": "—",
+                    "hpRPG": "—",
+                    "hpJavelin": "—",
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Работает только орудие"
+                  },
+                  "shortDesc": "Работает только орудие (шлак)."
+                },
+                {
+                  "id": "tos-1a-solntsepyok",
+                  "name": "TOS-1A Solntsepyok",
+                  "image": "tos-1a.png",
+                  "baseCost": 90,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Тяжёлая огнемётная система",
+                    "crew": "—",
+                    "hpRPG": 6,
+                    "hpJavelin": 3,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Ракетница нахуй"
+                  },
+                  "shortDesc": "Тяжёлая огнемётная система."
+                },
+                {
+                  "id": "plz-05",
+                  "name": "Самоходная гаубица PLZ-05",
+                  "image": "plz-05.png",
+                  "baseCost": 100,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Самоходная гаубица",
+                    "crew": "—",
+                    "hpRPG": 2,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Арта, нечего сказать+надо 2 человека"
+                  },
+                  "shortDesc": "Самоходная гаубица."
+                }
+              ]
+            },
+            "aa": {
+              "id": "aa",
+              "label": "ПВО",
+              "icon": "🎯",
+              "items": [
+                {
+                  "id": "gepard-1a2",
+                  "name": "Flakpanzer Gepard 1A2",
+                  "image": "gepard.png",
+                  "baseCost": 70,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Зенитная самоходная установка",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Зенитка-косилка"
+                  },
+                  "shortDesc": "Зенитная установка."
+                },
+                {
+                  "id": "pantsir-s1",
+                  "name": "Pantsir-S1",
+                  "image": "pantsir.png",
+                  "baseCost": 80,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Зенитный ракетно-пушечный комплекс",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Ракеты с Zaмонаводкой"
+                  },
+                  "shortDesc": "ПВО с ракетами и пушками."
+                },
+                {
+                  "id": "lav-ad-aav",
+                  "name": "LAV-AD AAV",
+                  "image": "lav-ad.png",
+                  "baseCost": 60,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Зенитная самоходная установка",
+                    "crew": "—",
+                    "hpRPG": 3,
+                    "hpJavelin": 2,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "ПВО с потанцевалом"
+                  },
+                  "shortDesc": "Зенитная установка на базе LAV."
+                }
+              ]
+            }
+          }
+        },
+        "aviation": {
+          "id": "aviation",
+          "label": "Авиация",
+          "icon": "✈️",
+          "subcategories": {
+            "helicopters": {
+              "id": "helicopters",
+              "label": "Вертолёты",
+              "icon": "🚁",
+              "items": [
+                {
+                  "id": "ah-6-little-bird",
+                  "name": "AH-6 Little bird",
+                  "image": "ah-6.png",
+                  "baseCost": 55,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Лёгкий разведывательный вертолёт",
+                    "crew": "—",
+                    "hpRPG": 1,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Спиливается даже огнестрелом"
+                  },
+                  "shortDesc": "Очень маленький и слабый вертолёт."
+                },
+                {
+                  "id": "mh-60m-black-hawk",
+                  "name": "MH-60M Black Hawk",
+                  "image": "black-hawk.png",
+                  "baseCost": 65,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Многоцелевой вертолёт",
+                    "crew": "—",
+                    "hpRPG": 1,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "На 3 места больше и круче"
+                  },
+                  "shortDesc": "Транспортный вертолёт, вместительнее Little Bird."
+                },
+                {
+                  "id": "rah-66-comanche",
+                  "name": "RAH-66 Comanche",
+                  "image": "comanche.png",
+                  "baseCost": 80,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Разведывательный ударный вертолёт",
+                    "crew": "—",
+                    "hpRPG": 1.5,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Куча вооружения"
+                  },
+                  "shortDesc": "Стелс-вертолёт с хорошим вооружением."
+                },
+                {
+                  "id": "ah-64-apache",
+                  "name": "AH-64 Apache",
+                  "image": "apache.png",
+                  "baseCost": 95,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Ударный вертолёт",
+                    "crew": "—",
+                    "hpRPG": 1.5,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Куча вооружения"
+                  },
+                  "shortDesc": "Легендарный ударный вертолёт НАТО."
+                },
+                {
+                  "id": "mi-28",
+                  "name": "МИ-28",
+                  "image": "mi-28.png",
+                  "baseCost": 100,
+                  "team": "soviets",
+                  "specs": {
+                    "type": "Ударный вертолёт",
+                    "crew": "—",
+                    "hpRPG": 1.5,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "Есть зенитка в отличие от апача"
+                  },
+                  "shortDesc": "Советский ударный вертолёт со встроенной зениткой."
+                },
+                {
+                  "id": "v-22-osprey",
+                  "name": "V-22 Osprey",
+                  "image": "osprey.png",
+                  "baseCost": 45,
+                  "team": "nato",
+                  "specs": {
+                    "type": "Конвертоплан",
+                    "crew": "—",
+                    "hpRPG": 1,
+                    "hpJavelin": 1,
+                    "armor": "—",
+                    "weapon": "—",
+                    "ammo": [],
+                    "speed": "—",
+                    "range": "—",
+                    "capacity": "—",
+                    "description": "ну это прям хуета"
+                  },
+                  "shortDesc": "Дорогая и бесполезная игрушка."
+                }
+              ]
+            },
+            "aircraft": {
+              "id": "aircraft",
+              "label": "Самолёты",
+              "icon": "🛩️",
+              "subcategories": {
+                "fighters": {
+                  "id": "fighters",
+                  "label": "Истребители",
+                  "icon": "⚡",
+                  "items": [
+                    {
+                      "id": "mig-29",
+                      "name": "Mig-29",
+                      "image": "mig-29.png",
+                      "baseCost": null,
+                      "team": "soviets",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["мелкокал. ракеты и ББ снаряды", "Ср. Авиабомба", "R-60"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Советский истребитель, надёжный и проверенный."
+                    },
+                    {
+                      "id": "f-4-phantom",
+                      "name": "F-4 Phantom",
+                      "image": "f-4.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Ср.авиабомба", "AIM-9", "большая ракета против наземных"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Легендарный американский истребитель."
+                    },
+                    {
+                      "id": "f-14-tomcat",
+                      "name": "F-14 Tomcat",
+                      "image": "f-14.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Ср.авиабомба", "AIM-54", "большая ракета против наземных"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Истребитель с изменяемой стреловидностью крыла."
+                    },
+                    {
+                      "id": "f-16-falcon",
+                      "name": "F-16 Fighting Falcon",
+                      "image": "f-16.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Ср.авиабомба", "AIM-9", "AIM-120"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Один из самых массовых истребителей НАТО."
+                    },
+                    {
+                      "id": "f-15-eagle",
+                      "name": "F-15 Eagle",
+                      "image": "f-15.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["AIM-9", "AIM-120", "Ср. Авиабомба"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот+стрелок",
+                        "description": "Господство в воздухе"
+                      },
+                      "shortDesc": "Символ воздушного господства НАТО."
+                    },
+                    {
+                      "id": "su-33-flanker",
+                      "name": "Su-33 Flanker",
+                      "image": "su-33.png",
+                      "baseCost": null,
+                      "team": "soviets",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["мелкокал. Ракеты и ББ снаряды", "Ср. Авиабомба", "R-60"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Палубный истребитель ВМФ России."
+                    },
+                    {
+                      "id": "jas-39-gripen",
+                      "name": "JAS 39E Gripen",
+                      "image": "jas-39.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Мелкокал. ББ снаряды", "Ср.авиабомба", "AIM-9", "AIM-120"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Шведский истребитель, лёгкий и современный."
+                    },
+                    {
+                      "id": "su-34-fullback",
+                      "name": "Su-34 Fullback",
+                      "image": "su-34.png",
+                      "baseCost": null,
+                      "team": "soviets",
+                      "specs": {
+                        "type": "Истребитель-бомбардировщик",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["мелкокал. Ракеты и ББ снаряды", "Ср. Авиабомба", "R-60"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Многоцелевой истребитель-бомбардировщик."
+                    },
+                    {
+                      "id": "f-35-lightning",
+                      "name": "F-35A Lighting",
+                      "image": "f-35.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["КРАШИТ СЕРВЕР"],
+                        "speed": "Моментально",
+                        "range": "—",
+                        "capacity": "Навсегда",
+                        "description": "ПИЗДА"
+                      },
+                      "shortDesc": "Крашит сервер, не покупай."
+                    },
+                    {
+                      "id": "f-22-raptor",
+                      "name": "F-22 Raptor",
+                      "image": "f-22.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["AIM-9", "AIM-120"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Стелс-истребитель, лучший в воздухе."
+                    },
+                    {
+                      "id": "f-18-hornet",
+                      "name": "F/A -18 Hornet",
+                      "image": "f-18.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Ср.авиабомба", "AIM-9", "AIM-120"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот+пассажир",
+                        "description": "—"
+                      },
+                      "shortDesc": "Палубный истребитель-бомбардировщик."
+                    },
+                    {
+                      "id": "f-117-nighthawk",
+                      "name": "F-117 Nighthawk",
+                      "image": "f-117.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Средняя авиабомба"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Стелс-штурмовик, невидимка."
+                    },
+                    {
+                      "id": "su-57-felon",
+                      "name": "Su-57 Felon",
+                      "image": "su-57.png",
+                      "baseCost": null,
+                      "team": "soviets",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["мелкокал. Ракеты и ББ снаряды", "Ср. Авиабомба", "R-60"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Российский стелс-истребитель 5-го поколения."
+                    },
+                    {
+                      "id": "f-2-viper-zero",
+                      "name": "F-2 Viper Zero",
+                      "image": "f-2.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Ср.авиабомба", "AIM-9", "AIM-120"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Японский истребитель на базе F-16."
+                    },
+                    {
+                      "id": "su-27-flanker",
+                      "name": "Su-27 Flanker",
+                      "image": "su-27.png",
+                      "baseCost": null,
+                      "team": "soviets",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["мелкокал. Ракеты и ББ снаряды", "Ср. Авиабомба", "R-60"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Тяжёлый истребитель ПВО."
+                    },
+                    {
+                      "id": "j-20-mighty-dragon",
+                      "name": "J-20 Mighty Dragon",
+                      "image": "j-20.png",
+                      "baseCost": null,
+                      "team": "soviets",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Мелкокал. ББ снаряды", "Ср.авиабомба", "AIM-9", "AIM-120"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Китайский стелс-истребитель."
+                    },
+                    {
+                      "id": "eurofighter-typhoon",
+                      "name": "Eurofighter Typhoon",
+                      "image": "typhoon.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Истребитель",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["мелкокал. Ракеты и ББ снаряд", "Ср. Авиабомба", "Больш. ракета"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Европейский многоцелевой истребитель."
+                    }
+                  ]
+                },
+                "attack": {
+                  "id": "attack",
+                  "label": "Штурмовики и бомбардировщики",
+                  "icon": "💣",
+                  "items": [
+                    {
+                      "id": "a-10-thunderbolt",
+                      "name": "A-10 Thunderbolt",
+                      "image": "a-10.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Штурмовик",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["мелкокал. Ракеты и ББ снаряд", "Ср. Авиабомба", "Больш. ракета"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Легендарный штурмовик, летающая пушка."
+                    },
+                    {
+                      "id": "su-25-frogfoot",
+                      "name": "Su-25 Frogfoot",
+                      "image": "su-25.png",
+                      "baseCost": null,
+                      "team": "soviets",
+                      "specs": {
+                        "type": "Штурмовик",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["мелкокал. Ракеты и ББ снаряды", "R-60"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот",
+                        "description": "—"
+                      },
+                      "shortDesc": "Советский штурмовик, аналог A-10."
+                    },
+                    {
+                      "id": "ju-87-stuka",
+                      "name": "Ju-87 Stuka",
+                      "image": "stuka.png",
+                      "baseCost": null,
+                      "team": "neutral",
+                      "specs": {
+                        "type": "Штурмовик",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["Малая и средняя авиабомба", "винтовочные патроны"],
+                        "speed": "170-180 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот+стрелок",
+                        "description": "—"
+                      },
+                      "shortDesc": "Немецкий пикирующий бомбардировщик ВОВ."
+                    },
+                    {
+                      "id": "b-2-spirit",
+                      "name": "B-2 Spirit",
+                      "image": "b-2.png",
+                      "baseCost": null,
+                      "team": "nato",
+                      "specs": {
+                        "type": "Бомбардировщик",
+                        "crew": "—",
+                        "hpRPG": "—",
+                        "hpJavelin": "—",
+                        "armor": "—",
+                        "weapon": "—",
+                        "ammo": ["GBU-57 (крашит хоста)", "Nuclear (крашит хоста)"],
+                        "speed": "200-210 км/ч",
+                        "range": "—",
+                        "capacity": "Пилот+пассажир",
+                        "description": "—"
+                      },
+                      "shortDesc": "Стратегический бомбардировщик-стелс."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+    "infantry": {
+      "id": "infantry",
+      "label": "Пехотное снаряжение",
+      "icon": "🎯",
+      "subcategories": {
+        "launchers": {
+          "id": "launchers",
+          "label": "Гранатомёты и гранаты",
+          "icon": "💥",
+          "items": [
+            {
+              "id": "m320-4-grenades",
+              "name": "М320+4 гранаты",
+              "image": "m320.png",
+              "baseCost": 10,
+              "team": "neutral",
+              "specs": {
+                "type": "Подствольный гранатомёт",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "мало урона, не ломает блоки"
+              },
+              "shortDesc": "Лёгкий гранатомёт с 4 гранатами."
+            },
+            {
+              "id": "m320-grenades",
+              "name": "Гранаты для М320",
+              "image": "m320-grenades.png",
+              "baseCost": 1,
+              "team": "neutral",
+              "specs": {
+                "type": "Боеприпасы",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "2 штуки за 1 очко"
+              },
+              "shortDesc": "Гранаты для М320 (2 шт.)."
+            },
+            {
+              "id": "rpg-tacz-3-rockets",
+              "name": "РПГ из TacZ+3 ракеты",
+              "image": "rpg-tacz.png",
+              "baseCost": 15,
+              "team": "neutral",
+              "specs": {
+                "type": "Ручной гранатомёт",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "мало урона"
+              },
+              "shortDesc": "РПГ с малым уроном (TacZ)."
+            },
+            {
+              "id": "rpg-tacz-rocket",
+              "name": "Ракета для РПГ из TacZ",
+              "image": "rpg-tacz-rocket.png",
+              "baseCost": 2,
+              "team": "neutral",
+              "specs": {
+                "type": "Боеприпасы",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "1 штука за 2 очка"
+              },
+              "shortDesc": "Ракета для РПГ TacZ."
+            },
+            {
+              "id": "m79-3-grenades",
+              "name": "М79+3 гранаты",
+              "image": "m79.png",
+              "baseCost": 15,
+              "team": "neutral",
+              "specs": {
+                "type": "Ручной гранатомёт",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "бьёт навесом, не много урона"
+              },
+              "shortDesc": "Гранатомёт с навесной траекторией."
+            },
+            {
+              "id": "m79-grenade",
+              "name": "Граната для М79",
+              "image": "m79-grenade.png",
+              "baseCost": 2,
+              "team": "neutral",
+              "specs": {
+                "type": "Боеприпасы",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "1 штука за 2 очка"
+              },
+              "shortDesc": "Гранаты для М79."
+            },
+            {
+              "id": "rpg-sbw-2-2",
+              "name": "РПГ из SBW+2 фугаса +2 ББ",
+              "image": "rpg-sbw.png",
+              "baseCost": 25,
+              "team": "neutral",
+              "specs": {
+                "type": "Ручной гранатомёт",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "Много урона и разрушений"
+              },
+              "shortDesc": "Мощный РПГ SBW."
+            },
+            {
+              "id": "rpg-sbw-rocket",
+              "name": "Ракета для РПГ из SBW",
+              "image": "rpg-sbw-rocket.png",
+              "baseCost": 3,
+              "team": "neutral",
+              "specs": {
+                "type": "Боеприпасы",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "1 штука за 3 очка (любую)"
+              },
+              "shortDesc": "Ракета для РПГ SBW."
+            },
+            {
+              "id": "javelin-2-rockets",
+              "name": "Javelin+2 ракеты",
+              "image": "javelin.png",
+              "baseCost": 40,
+              "team": "nato",
+              "specs": {
+                "type": "ПТРК с автонаводкой",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "Автонаводка + разносит технику"
+              },
+              "shortDesc": "Самонаводящийся ПТРК Javelin."
+            },
+            {
+              "id": "javelin-rocket",
+              "name": "Ракеты Javelin",
+              "image": "javelin-rocket.png",
+              "baseCost": 5,
+              "team": "nato",
+              "specs": {
+                "type": "Боеприпасы",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "1 штука за 5 очков"
+              },
+              "shortDesc": "Ракета для Javelin."
+            },
+            {
+              "id": "mortar-4-shells",
+              "name": "Миномёт+4 снаряда(любые)",
+              "image": "mortar.png",
+              "baseCost": 20,
+              "team": "neutral",
+              "specs": {
+                "type": "Миномёт",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Миномёт с 4 снарядами."
+            },
+            {
+              "id": "mortar-phosphorus",
+              "name": "фосфорный снаряд",
+              "image": "mortar-phosphorus.png",
+              "baseCost": 3,
+              "team": "neutral",
+              "specs": {
+                "type": "Боеприпасы",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Фосфорный снаряд для миномёта."
+            },
+            {
+              "id": "mortar-regular",
+              "name": "обычный снаряд",
+              "image": "mortar-regular.png",
+              "baseCost": 2,
+              "team": "neutral",
+              "specs": {
+                "type": "Боеприпасы",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Обычный снаряд для миномёта."
+            }
+          ]
+        },
+        "mines": {
+          "id": "mines",
+          "label": "Мины и взрывчатка",
+          "icon": "💣",
+          "items": [
+            {
+              "id": "grenade-hand",
+              "name": "Ручная граната",
+              "image": "grenade-hand.png",
+              "baseCost": 2,
+              "team": "neutral",
+              "specs": {
+                "type": "Граната",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Обычная ручная граната."
+            },
+            {
+              "id": "rgo",
+              "name": "РГО",
+              "image": "rgo.png",
+              "baseCost": 3,
+              "team": "neutral",
+              "specs": {
+                "type": "Граната",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Ручная граната РГО (осколочная)."
+            },
+            {
+              "id": "smoke-grenade",
+              "name": "Дымовая граната",
+              "image": "smoke-grenade.png",
+              "baseCost": 1,
+              "team": "neutral",
+              "specs": {
+                "type": "Дымовая граната",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Дымовая завеса."
+            },
+            {
+              "id": "flashbang",
+              "name": "Светошумовая",
+              "image": "flashbang.png",
+              "baseCost": 1,
+              "team": "neutral",
+              "specs": {
+                "type": "Светошумовая граната",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Ослепляет и оглушает врага."
+            },
+            {
+              "id": "c4-sticky",
+              "name": "С4 Sticky Bomb",
+              "image": "c4-sticky.png",
+              "baseCost": 3,
+              "team": "neutral",
+              "specs": {
+                "type": "Взрывчатка",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Липкая взрывчатка C4."
+            },
+            {
+              "id": "c4-timer",
+              "name": "C4 на таймере",
+              "image": "c4-timer.png",
+              "baseCost": 4,
+              "team": "neutral",
+              "specs": {
+                "type": "Взрывчатка",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "C4 с таймером обратного отсчёта."
+            },
+            {
+              "id": "c4-det",
+              "name": "C4 на детонаторе",
+              "image": "c4-det.png",
+              "baseCost": 6,
+              "team": "neutral",
+              "specs": {
+                "type": "Взрывчатка",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "стэлс штука"
+              },
+              "shortDesc": "Скрытная C4 с детонатором."
+            },
+            {
+              "id": "dragon-tooth",
+              "name": "Драконий зуб",
+              "image": "dragon-tooth.png",
+              "baseCost": 1,
+              "team": "neutral",
+              "specs": {
+                "type": "Инженерное заграждение",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "нихуя урона нет"
+              },
+              "shortDesc": "Противотанковое заграждение (3 шт.)."
+            },
+            {
+              "id": "claymore",
+              "name": "Клеймор",
+              "image": "claymore.png",
+              "baseCost": 3,
+              "team": "neutral",
+              "specs": {
+                "type": "Мины",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "Ваншотит"
+              },
+              "shortDesc": "Направленная мина, убивает с одного раза."
+            },
+            {
+              "id": "wall-mine",
+              "name": "Настенная мина",
+              "image": "wall-mine.png",
+              "baseCost": 2,
+              "team": "neutral",
+              "specs": {
+                "type": "Мины",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Мины на стены."
+            }
+          ]
+        },
+        "drones": {
+          "id": "drones",
+          "label": "Дроны и РЭБ",
+          "icon": "🛸",
+          "items": [
+            {
+              "id": "reb-portable",
+              "name": "портативный РЭБ",
+              "image": "reb-portable.png",
+              "baseCost": 5,
+              "team": "neutral",
+              "specs": {
+                "type": "Средство РЭБ",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Переносная станция радиоэлектронной борьбы."
+            },
+            {
+              "id": "reb-station",
+              "name": "Стационарный РЭБ",
+              "image": "reb-station.png",
+              "baseCost": 15,
+              "team": "neutral",
+              "specs": {
+                "type": "Средство РЭБ",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Стационарная мощная станция РЭБ."
+            },
+            {
+              "id": "drone-basic",
+              "name": "Дрон",
+              "image": "drone-basic.png",
+              "baseCost": 5,
+              "team": "neutral",
+              "specs": {
+                "type": "БПЛА",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "2 штуки за 5 очков"
+              },
+              "shortDesc": "Обычный дрон (2 шт.)."
+            },
+            {
+              "id": "drone-pro",
+              "name": "Проф. Дрон",
+              "image": "drone-pro.png",
+              "baseCost": 5,
+              "team": "neutral",
+              "specs": {
+                "type": "БПЛА",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Профессиональный дрон."
+            },
+            {
+              "id": "monitor",
+              "name": "Монитор",
+              "image": "monitor.png",
+              "baseCost": 5,
+              "team": "neutral",
+              "specs": {
+                "type": "Оборудование",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "2 штуки за 5 очков, эта хуйня может сломаться"
+              },
+              "shortDesc": "Монитор для управления дронами (2 шт.)."
+            },
+            {
+              "id": "pro-controller",
+              "name": "проф. Пульт",
+              "image": "pro-controller.png",
+              "baseCost": 5,
+              "team": "neutral",
+              "specs": {
+                "type": "Оборудование",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "—"
+              },
+              "shortDesc": "Профессиональный пульт управления."
+            },
+            { 
+              "id": "fiber-optic",
+              "name": "Оптоволокно",
+              "image": "fiber-optic.png",
+              "baseCost": 5,
+              "team": "neutral",
+              "specs": {
+                "type": "Оборудование",
+                "crew": "—",
+                "hpRPG": "—",
+                "hpJavelin": "—",
+                "armor": "—",
+                "weapon": "—",
+                "ammo": [],
+                "speed": "—",
+                "range": "—",
+                "capacity": "—",
+                "description": "10 штук за 5 очков"
+              },
+              "shortDesc": "Оптоволокно (10 шт.)."
+            }
+          ]
+        }
+      }
+    }
+  }
+}}}

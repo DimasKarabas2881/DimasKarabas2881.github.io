@@ -1,0 +1,401 @@
+@import "basic.css";
+
+:root {
+  /* ===== ОСНОВА ===== */
+  --page-background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+  --page-background-secondary: #1a1a1a; /* Для карточек/контейнеров */
+  --text-color: #F5F5F5;       /* Белый текст */
+  --text-color-dim: #888888;   /* Серый текст (второстепенный) */
+  --text-color-bright: #ffffff; /* Яркий белый для заголовков */
+  --border-color: #333333;
+  --border-color-light: #444444;
+
+  /* ===== КАРТОЧКИ ===== */
+  --card-background: #1a1a1a;
+  --card-border: 1px solid #333333;
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+  
+  /* ===== ТИПОГРАФИКА ===== */
+  --font-family: 'Courier New', Consolas, 'Segoe UI', monospace;
+  --font-family-secondary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* ===== РАДИУСЫ ===== */
+  --radius: 4px;
+  --radius-card: 8px;
+  
+  /* ===== ОТСТУПЫ ===== */
+  --spacing: 20px;
+  --spacing-sm: 8px;
+  --spacing-lg: 32px;
+  
+  /* ===== ТЕНИ ===== */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+  /* ===== КНОПКИ ===== */
+  --button-bg: #2a2a2a;
+  --button-text: #ffffff;
+  --button-border: 2px solid #555555;
+  --button-radius: 4px;
+  --button-padding: 12px 28px;
+  --button-font-size: 16px;
+  --button-font-weight: 700;
+  --button-shadow-hover: 0 4px 20px rgba(255, 255, 255, 0.1);
+  --button-scale-hover: 1.02;
+  --button-transition: all 0.2s ease;
+
+  /* ===== ЦВЕТА КОМАНД ===== */
+  --color-nato: #0056a7;
+  --color-nato-light: #1a7bc4;
+  --color-soviets: #cc0000;
+  --color-soviets-light: #e62e2e;
+  --color-rebels: #2e7d32;
+  --color-rebels-light: #4caf50;
+}
+
+body {
+  font-family: var(--font-family-secondary);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ===== ЗАГОЛОВКИ ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 48px;
+  color: var(--text-color-bright);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 32px;
+  color: var(--text-color-bright);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== ТЕКСТ ===== */
+p {
+  color: var(--text-color-dim);
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing);
+}
+
+/* ===== КАРТОЧКИ ===== */
+.card {
+  background: var(--card-background);
+  border: var(--card-border);
+  border-radius: var(--radius-card);
+  padding: var(--spacing);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #555555;
+  transform: translateY(-2px);
+}
+
+/* ===== КНОПКИ ===== */
+.button-main {
+  font-family: var(--font-family);
+  border: var(--button-border);
+}
+
+.button-main:hover {
+  border-color: #ffffff;
+  background: #333333;
+}
+
+
+
+
+
+
+
+
+/* ===== КАРТОЧКА ТЕХНИКИ ===== */
+.item-card {
+  background: var(--card-background);
+  border: 1px solid #2a2a2a;
+  border-radius: var(--radius-card);
+  padding: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.item-card:hover {
+  border-color: #555555;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.item-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #111111;
+  border: 1px solid #2a2a2a;
+  filter: grayscale(100%); /* ← Силуэты в чёрно-белом! */
+  transition: filter 0.3s ease;
+}
+
+.item-card:hover img {
+  filter: grayscale(50%); /* При наведении немного цвета, но не до конца */
+}
+
+/* ===== НАЗВАНИЕ ===== */
+.item-name {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--text-color-bright);
+  font-size: 18px;
+  margin: 10px 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===== ЦЕНА (золотая) ===== */
+.item-price {
+  color: var(--color-cost);
+  font-weight: 700;
+  font-size: 20px;
+  font-family: var(--font-family);
+}
+
+/* ===== ТЕГ (тип техники) ===== */
+.item-tag {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #2a2a2a;
+  color: var(--text-color-dim);
+  border: 1px solid #333333;
+}
+
+/* ===== ВРАЖЕСКАЯ ТЕХНИКА ===== */
+.item-tag.enemy {
+  color: var(--color-enemy);
+  border-color: var(--color-enemy);
+  background: rgba(255, 23, 68, 0.05);
+}
+
+
+/*                          ЧЕРНОВИК                           */
+
+
+/* ===== ВЫБОР КОМАНДЫ ===== */
+.team-btn {
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: var(--radius);
+    color: #888;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+.team-btn:hover {
+    border-color: #666;
+    color: #fff;
+}
+
+.team-btn.active[data-team="nato"] {
+    border-color: #0056a7;
+    color: #0056a7;
+    background: rgba(0, 86, 167, 0.1);
+}
+
+.team-btn.active[data-team="soviets"] {
+    border-color: #cc0000;
+    color: #cc0000;
+    background: rgba(204, 0, 0, 0.1);
+}
+
+.team-btn.active[data-team="rebels"] {
+    border-color: #2e7d32;
+    color: #2e7d32;
+    background: rgba(46, 125, 50, 0.1);
+}
+
+.setup-group {
+    margin: 16px 0;
+}
+
+.setup-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+#squad-size {
+    padding: 12px;
+    background: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: var(--radius);
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* ===== КАТАЛОГ ===== */
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 16px;
+}
+
+#category-nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.cat-btn {
+    padding: 8px 16px;
+    background: transparent;
+    color: #888;
+    border: 1px solid #333;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cat-btn:hover {
+    border-color: #666;
+    color: #fff;
+}
+
+.cat-btn.active {
+    border-color: #ffd700;
+    color: #ffd700;
+}
+
+#breadcrumbs {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 16px;
+    padding: 8px 0;
+}
+
+/* ===== КАРТОЧКИ ===== */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.item-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: var(--radius);
+    transition: all 0.2s;
+}
+
+.item-card:hover {
+    border-color: #666;
+    transform: translateY(-3px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    background: #111;
+    border-radius: 4px;
+    border: 1px solid #2a2a2a;
+}
+
+.item-name {
+    color: #fff;
+    font-size: 16px;
+    margin: 8px 0 4px;
+}
+
+.item-price {
+    color: #ffd700;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.item-tag {
+    display: inline-block;
+    padding: 2px 10px;
+    background: #2a2a2a;
+    color: #888;
+    font-size: 11px;
+    border-radius: 2px;
+}
+
+.item-tag.enemy {
+    color: #ff1744;
+    border: 1px solid #ff1744;
+}
+
+.buy-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    background: #2a2a2a;
+    color: #ffd700;
+    border: 1px solid #444;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.buy-btn:hover {
+    background: #333;
+    border-color: #ffd700;
+}
+
+/* ===== ИТОГИ ===== */
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #1a1a1a;
+    border-left: 3px solid #ffd700;
+    margin-bottom: 8px;
+}
+
+.result-budget {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.result-total {
+    margin-top: 20px;
+    font-size: 20px;
+}
