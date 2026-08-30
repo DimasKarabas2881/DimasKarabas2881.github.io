@@ -48,8 +48,8 @@
   --color-nato-light: #1a7bc4;
   --color-soviets: #cc0000;
   --color-soviets-light: #e62e2e;
-  --color-rebels: #2e7d32;
-  --color-rebels-light: #4caf50;
+  --color-rebels: #d1ad0d;
+  --color-rebels-light: #ffd324;
 }
 
 body {
@@ -224,20 +224,20 @@ a {
 }
 
 .team-btn.active[data-team="nato"] {
-    border-color: #0056a7;
-    color: #0056a7;
+    border-color: var(--color-nato-light);
+    color: var(--color-nato);
     background: rgba(0, 86, 167, 0.1);
 }
 
 .team-btn.active[data-team="soviets"] {
-    border-color: #cc0000;
-    color: #cc0000;
+    border-color: var(--color-soviets-light);
+    color: var(--color-soviets);
     background: rgba(204, 0, 0, 0.1);
 }
 
 .team-btn.active[data-team="rebels"] {
-    border-color: #2e7d32;
-    color: #2e7d32;
+    border-color: var(--color-rebels-light);
+    color: var(--color-rebels);
     background: rgba(46, 125, 50, 0.1);
 }
 
@@ -378,6 +378,17 @@ a {
 .buy-btn:hover {
     background: #333;
     border-color: #ffd700;
+}
+
+/* ===== КАРТОЧКИ КАТЕГОРИЙ ===== */
+.category-card {
+    transition: all 0.2s ease !important;
+}
+
+.category-card:hover {
+    border-color: #666 !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* ===== ИТОГИ ===== */

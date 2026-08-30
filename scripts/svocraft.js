@@ -47,7 +47,7 @@ function initApp() {
     document.getElementById('back-to-shop').addEventListener('click', backToShop);
     document.getElementById('reset-all').addEventListener('click', resetAll);
     
-    document.getElementById('app-status').textContent = '✅ Готов к работе';
+    document.getElementById('app-status').textContent = 'Готов к работе';
     document.getElementById('app-status').style.color = '#4caf50';
 }
 
@@ -202,7 +202,7 @@ function renderBreadcrumbs() {
 }
 
 // =====================================================
-// 11. РЕНДЕР ТОВАРОВ
+// 11. РЕНДЕР ТОВАРОВ ИЛИ КАТЕГОРИЙ
 // =====================================================
 function renderItems() {
     const grid = document.getElementById('items-grid');
@@ -213,7 +213,45 @@ function renderItems() {
         grid.innerHTML = '<p style="color: #888; text-align: center;">Категория не найдена</p>';
         return;
     }
-    
+
+    // ===== 1. ЕСЛИ ЕСТЬ ПОДКАТЕГОРИИ — ПОКАЗЫВАЕМ ИХ =====
+    if (currentObj.subcategories) {
+        const subKeys = Object.keys(currentObj.subcategories);
+        if (subKeys.length) {
+            subKeys.forEach(key => {
+                const sub = currentObj.subcategories[key];
+                const card = document.createElement('div');
+                card.className = 'category-card';
+                card.style.cssText = `
+                    background: var(--card-background);
+                    border: 1px solid var(--border-color);
+                    border-radius: var(--radius-card);
+                    padding: 20px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 120px;
+                `;
+                card.innerHTML = `
+                    <div style="font-size: 48px;">${sub.icon || '📂'}</div>
+                    <h3 style="color: var(--text-color-bright); margin: 8px 0 4px;">${sub.label}</h3>
+                    <p style="color: var(--text-color-dim); font-size: 14px;">${sub.items ? sub.items.length : 0} товаров</p>
+                `;
+                card.addEventListener('click', () => {
+                    state.currentPath.push(sub.id);
+                    renderShop();
+                });
+                grid.appendChild(card);
+            });
+            return;
+        }
+    }
+
+    // ===== 2. ЕСЛИ ЕСТЬ ТОВАРЫ — ПОКАЗЫВАЕМ ИХ =====
     if (currentObj.items && currentObj.items.length) {
         const validItems = currentObj.items.filter(item => item.baseCost !== null);
         
@@ -226,9 +264,11 @@ function renderItems() {
             const card = createItemCard(item);
             grid.appendChild(card);
         });
-    } else {
-        grid.innerHTML = '<p style="color: #888; text-align: center;">В этой категории нет товаров</p>';
+        return;
     }
+
+    // ===== 3. ЕСЛИ НИЧЕГО НЕТ =====
+    grid.innerHTML = '<p style="color: #888; text-align: center;">В этой категории нет товаров</p>';
 }
 
 // =====================================================
