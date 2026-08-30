@@ -382,13 +382,25 @@ a {
 
 /* ===== КАРТОЧКИ КАТЕГОРИЙ ===== */
 .category-card {
-    transition: all 0.2s ease !important;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-card);
+    padding: 24px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+    background: #1a1a1a;
 }
 
 .category-card:hover {
-    border-color: #666 !important;
-    transform: translateY(-4px) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+    border-color: #666;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* ===== ИТОГИ ===== */

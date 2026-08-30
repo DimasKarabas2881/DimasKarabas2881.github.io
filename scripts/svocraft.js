@@ -11,11 +11,10 @@ const state = {
 };
 
 // =====================================================
-// 2. ЗАГРУЗКА DATA.JSON (ЖЁСТКИЙ ПУТЬ)
+// 2. ЗАГРУЗКА DATA.JSON
 // =====================================================
 async function loadData() {
     try {
-        // ПРОСТО И ПОНЯТНО: поднимаемся на уровень выше от pages/ и идём в data/
         const response = await fetch('../data/market.json');
         
         if (!response.ok) {
@@ -99,7 +98,6 @@ function startShop() {
 // =====================================================
 function renderShop() {
     updateBudgetDisplay();
-    renderNavigation();
     renderBreadcrumbs();
     renderItems();
 }
@@ -135,46 +133,7 @@ function getCurrentObject() {
 }
 
 // =====================================================
-// 9. РЕНДЕР НАВИГАЦИИ
-// =====================================================
-function renderNavigation() {
-    const nav = document.getElementById('category-nav');
-    nav.innerHTML = '';
-    
-    const currentObj = getCurrentObject();
-    if (!currentObj) return;
-    
-    if (currentObj.subcategories) {
-        for (const key in currentObj.subcategories) {
-            const sub = currentObj.subcategories[key];
-            const btn = document.createElement('button');
-            btn.className = 'cat-btn';
-            btn.dataset.cat = sub.id;
-            btn.textContent = `${sub.icon || '📂'} ${sub.label}`;
-            
-            btn.addEventListener('click', () => {
-                state.currentPath.push(sub.id);
-                renderShop();
-            });
-            
-            nav.appendChild(btn);
-        }
-    }
-    
-    if (state.currentPath.length > 1) {
-        const backBtn = document.createElement('button');
-        backBtn.className = 'cat-btn back-btn';
-        backBtn.textContent = '⬅ Назад';
-        backBtn.addEventListener('click', () => {
-            state.currentPath.pop();
-            renderShop();
-        });
-        nav.prepend(backBtn);
-    }
-}
-
-// =====================================================
-// 10. ХЛЕБНЫЕ КРОШКИ
+// 9. ХЛЕБНЫЕ КРОШКИ
 // =====================================================
 function renderBreadcrumbs() {
     const container = document.getElementById('breadcrumbs');
@@ -202,7 +161,7 @@ function renderBreadcrumbs() {
 }
 
 // =====================================================
-// 11. РЕНДЕР ТОВАРОВ ИЛИ КАТЕГОРИЙ
+// 10. РЕНДЕР КАТАЛОГА (категории ИЛИ товары)
 // =====================================================
 function renderItems() {
     const grid = document.getElementById('items-grid');
@@ -222,24 +181,12 @@ function renderItems() {
                 const sub = currentObj.subcategories[key];
                 const card = document.createElement('div');
                 card.className = 'category-card';
-                card.style.cssText = `
-                    background: var(--card-background);
-                    border: 1px solid var(--border-color);
-                    border-radius: var(--radius-card);
-                    padding: 20px;
-                    text-align: center;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    min-height: 120px;
-                `;
                 card.innerHTML = `
                     <div style="font-size: 48px;">${sub.icon || '📂'}</div>
                     <h3 style="color: var(--text-color-bright); margin: 8px 0 4px;">${sub.label}</h3>
-                    <p style="color: var(--text-color-dim); font-size: 14px;">${sub.items ? sub.items.length : 0} товаров</p>
+                    <p style="color: var(--text-color-dim); font-size: 14px;">
+                        ${sub.items ? sub.items.filter(i => i.baseCost !== null).length : 0} товаров
+                    </p>
                 `;
                 card.addEventListener('click', () => {
                     state.currentPath.push(sub.id);
@@ -272,7 +219,7 @@ function renderItems() {
 }
 
 // =====================================================
-// 12. СОЗДАНИЕ КАРТОЧКИ
+// 11. СОЗДАНИЕ КАРТОЧКИ ТОВАРА
 // =====================================================
 function createItemCard(item) {
     const card = document.createElement('div');
@@ -288,7 +235,7 @@ function createItemCard(item) {
              onerror="this.src='../assets/images/placeholder.png'; this.onerror=null;">
         <h4 class="item-name">${item.name}</h4>
         <p class="item-price">💰 ${finalPrice}$</p>
-        <span class="item-tag ${isEnemy ? 'enemy' : ''}">${isEnemy ? '⚔️ ВРАГ' : item.specs?.type || 'Техника'}</span>
+        <span class="item-tag ${isEnemy ? 'enemy' : ''}">${isEnemy ? 'ВРАГ' : item.specs?.type || 'Техника'}</span>
         <button class="buy-btn" data-item-id="${item.id}">➕ Купить</button>
     `;
     
@@ -301,7 +248,7 @@ function createItemCard(item) {
 }
 
 // =====================================================
-// 13. РАСЧЁТ ЦЕНЫ С НАЦЕНКОЙ
+// 12. РАСЧЁТ ЦЕНЫ С НАЦЕНКОЙ
 // =====================================================
 function getPrice(item) {
     if (state.team === 'rebels') return item.baseCost;
@@ -315,7 +262,7 @@ function getPrice(item) {
 }
 
 // =====================================================
-// 14. ПРОВЕРКА ВРАЖЕСКОЙ ТЕХНИКИ
+// 13. ПРОВЕРКА ВРАЖЕСКОЙ ТЕХНИКИ
 // =====================================================
 function isEnemyItem(item) {
     if (state.team === 'rebels') return false;
@@ -324,7 +271,7 @@ function isEnemyItem(item) {
 }
 
 // =====================================================
-// 15. ПОКУПКА
+// 14. ПОКУПКА
 // =====================================================
 function buyItem(itemId) {
     let item = null;
@@ -353,7 +300,7 @@ function buyItem(itemId) {
     const price = getPrice(item);
     
     if (state.budget < price) {
-        alert('❌ Недостаточно средств!');
+        alert('Недостаточно средств!');
         return;
     }
     
@@ -367,11 +314,11 @@ function buyItem(itemId) {
     
     updateBudgetDisplay();
     renderItems();
-    console.log(`✅ Куплено: ${item.name} за ${price}$`);
+    console.log(`Куплено: ${item.name} за ${price}$`);
 }
 
 // =====================================================
-// 16. ИТОГИ
+// 15. ИТОГИ
 // =====================================================
 function showResults() {
     if (!state.cart.length) {
@@ -404,7 +351,7 @@ function showResults() {
     html += `
         </div>
         <div class="result-total">
-            <span>💰 Потрачено: ${totalSpent}$</span>
+            <span>Потрачено: ${totalSpent}$</span>
         </div>
     `;
     
@@ -412,7 +359,7 @@ function showResults() {
 }
 
 // =====================================================
-// 17. ВЕРНУТЬСЯ В МАГАЗИН
+// 16. ВЕРНУТЬСЯ В МАГАЗИН
 // =====================================================
 function backToShop() {
     showScreen('screen-shop');
@@ -420,7 +367,7 @@ function backToShop() {
 }
 
 // =====================================================
-// 18. СБРОС
+// 17. СБРОС
 // =====================================================
 function resetAll() {
     if (!confirm('Точно начать заново?')) return;
@@ -438,7 +385,7 @@ function resetAll() {
 }
 
 // =====================================================
-// 19. ПЕРЕКЛЮЧЕНИЕ ЭКРАНОВ
+// 18. ПЕРЕКЛЮЧЕНИЕ ЭКРАНОВ
 // =====================================================
 function showScreen(screenId) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -446,6 +393,6 @@ function showScreen(screenId) {
 }
 
 // =====================================================
-// 20. ЗАПУСК
+// 19. ЗАПУСК
 // =====================================================
 document.addEventListener('DOMContentLoaded', loadData);
