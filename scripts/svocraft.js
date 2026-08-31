@@ -43,6 +43,7 @@ function initApp() {
     
     document.getElementById('start-shop').addEventListener('click', startShop);
     document.getElementById('finish-shop').addEventListener('click', showResults);
+    document.getElementById('back-category').addEventListener('click', goBackCategory);
     document.getElementById('back-to-shop').addEventListener('click', backToShop);
     document.getElementById('reset-all').addEventListener('click', resetAll);
     
@@ -100,6 +101,23 @@ function renderShop() {
     updateBudgetDisplay();
     renderBreadcrumbs();
     renderItems();
+    updateBackButton();
+}
+
+// =====================================================
+// 6.1. НАВИГАЦИЯ НАЗАД ПО КАТАЛОГУ
+// =====================================================
+function goBackCategory() {
+    if (state.currentPath.length > 1) {
+        state.currentPath.pop();
+        renderShop();
+    }
+}
+
+function updateBackButton() {
+    const btn = document.getElementById('back-category');
+    if (!btn) return;
+    btn.style.display = state.currentPath.length > 1 ? 'inline-block' : 'none';
 }
 
 // =====================================================
@@ -181,12 +199,17 @@ function renderItems() {
                 const sub = currentObj.subcategories[key];
                 const card = document.createElement('div');
                 card.className = 'category-card';
+
+                const countLabel = sub.items
+                    ? `<p style="color: var(--text-color-dim); font-size: 14px;">
+                           ${sub.items.filter(i => i.baseCost !== null).length} товаров
+                       </p>`
+                    : '';
+
                 card.innerHTML = `
                     <div style="font-size: 48px;">${sub.icon || '📂'}</div>
                     <h3 style="color: var(--text-color-bright); margin: 8px 0 4px;">${sub.label}</h3>
-                    <p style="color: var(--text-color-dim); font-size: 14px;">
-                        ${sub.items ? sub.items.filter(i => i.baseCost !== null).length : 0} товаров
-                    </p>
+                    ${countLabel}
                 `;
                 card.addEventListener('click', () => {
                     state.currentPath.push(sub.id);
@@ -290,7 +313,7 @@ function buyItem(itemId) {
         return null;
     }
     
-    item = search(state.data.catalog);
+    item = search({ subcategories: state.data.catalog });
     
     if (!item) {
         alert('Ошибка: товар не найден');

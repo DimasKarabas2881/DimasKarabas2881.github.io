@@ -301,6 +301,12 @@ a {
     color: #ffd700;
 }
 
+.shop-nav-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 #breadcrumbs {
     color: #555;
     font-size: 14px;
