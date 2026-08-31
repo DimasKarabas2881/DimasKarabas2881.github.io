@@ -116,7 +116,7 @@ function updateBudgetDisplay() {
 function getCurrentObject() {
     if (!state.data) return null;
     
-    let current = state.data.catalog;
+    let current = { subcategories: state.data.catalog };
     
     for (let i = 1; i < state.currentPath.length; i++) {
         const id = state.currentPath[i];
